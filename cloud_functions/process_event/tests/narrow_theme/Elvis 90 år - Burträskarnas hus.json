@@ -1,0 +1,35 @@
+{
+  "source": "nortic",
+  "source_data": {
+    "name": "Elvis 90 år - Burträskarnas hus",
+    "tags": [
+      "Burträsk",
+      "Burträskarnas hus",
+      "Elvis",
+      "Elvis 90 ",
+      "Elvis 90 år",
+      "Erikshjälpen",
+      "Joel Nunez",
+      "Skellefteå",
+      "USA"
+    ],
+    "image": "https://branding.nortic.io/organizer/3674/event/63035?type=default&redirect=t",
+    "venue": {
+      "city": "Burträsk",
+      "name": "Burträskarnas hus",
+      "zipcode": 93732,
+      "address_text": "Skelleftevägen 1"
+    },
+    "currency": "SEK",
+    "event_id": "252424",
+    "organizer": "NORTHEVENT AB",
+    "description": "<p>En konsert med älskade hits från Elvis, 50 & 60-talet och Joel Nunez egna repertoar.<br><br>Kom och fira 50 & 60-talet tillsammans med oss genom en ösig och nostalgi show där vi särskilt kommer uppmärksamma Elvis som skulle ha fyllt 90 i år.<br><br>Onumrerade platser, cirka 2h (paus i mitten).</p>\r\n<p>En konsert där musikalisk glädje, ös, engagemang och en fantastisk låtskatt står i centrum. Dessutom är barnrättsorganisationen Erikshjälpen med på denna turné och berättar om sin välgörande verksamhet, då Joel vill att dessa konserter också ska betyda något för utsatta barn och deras familjer!</p>\r\n<p> Info om Joel Nunez<br><span style=\"font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\">Joel Nunez är en cubansk/amerikansk sångare som blev upptäckt på kryssningsfartyg av ett svenskt artistbolag, flyttade till Sverige och blev av tidningen Megafonen utnämnd till Norrlands mest bokade underhållare 2014-2019 (hela 850 spelningar i Sverige under den tiden)!</span></p>\r\n<p>Efter ett par år i hemlandet så flyttade Joel och familjen tillbaka till Sverige 2021 och han har sedan dess turnerat flitigt, både som soloartist, men har också gjort turnéer och konserter med Doug Seegers, Chris Kläfford, Shirley Clamp och Sonja Aldén. Både hans låt ”Wait for me” och \"Ding Dong\" har spelats flitigt på radio över hela Sverige! Joel har gjort 90 konserter med den turnérande showen Elvis, Orbison & I där Joel är frontman och s<span style=\"font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\">ålt över 20.000 biljetter.</span></p>\r\n<!-- x-tinymce/html -->\r\n<p><span style=\"font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\">Info om Elvis 90 år<br></span><span style=\"font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\">På den här konserten kommer Joel tillsammans med Sverigeelitens musiker (triosättning) att bjuda på de allra största hitsen från 50-talet, varvat med eget material. Det kommer bli en hel del från Elvis fantastiska repertoar och andra älskade klassiker från 50 och 60-talet. Han varvar musiken med korta berättelser från sitt eget liv, både glädje, sorg och skratt. Det blir en mäktig konsert i 50-tals anda!</span></p>\r\n<p>30kr serv.avg/biljett (Nortic.se)</p>\r\n<p>Konserten arrangeras av Erikshjälpen i samarbete med studieförbundet Sensus.</p>",
+    "price_range": [
+      195.0,
+      395.0
+    ],
+    "ticket_link": "https://www.nortic.se/ticket/show/252424",
+    "end_datetime": "2025-05-04T16:00:00Z",
+    "start_datetime": "2025-05-04T16:00:00Z"
+  }
+}

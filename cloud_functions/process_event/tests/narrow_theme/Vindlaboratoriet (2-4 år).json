@@ -1,0 +1,23 @@
+{
+  "source": "kulturbiljetter",
+  "source_data": {
+    "name": "Vindlaboratoriet (2-4 år)",
+    "image": "https://kulturbiljetter.se/storage/c25b5daa2a1d6c3d2775-ep.jpg",
+    "venue": {
+      "city": "Stockholm",
+      "name": "Teater Tre",
+      "address_text": "Rosenlundsgatan 12"
+    },
+    "currency": "SEK",
+    "event_id": "32716",
+    "organizer": "Teater Tre",
+    "description": "<p><strong>Ett humoristiskt och akrobatiskt äventyr för de minsta.</strong></p><p>Vinden susar, brusar, puffar och stormar. Vi har alla känt den, men aldrig någonsin sett den; den är mystisk och spännande, något som bara måste utforskas. I denna föreställning görs det av Vindjägarna – två vänner som vill fånga vinden och försöka förstå dess nyckfullheter. Vännerna möts på en lekplats och förvandlar klätterställningen till ett vindlaboratorium. I ställningen hänger, svänger och snurrar de till ljudet av rytmiska vindpustar, buller och brak. </p><p>Hur känns vinden mot min kropp? Hur smakar den? Vad gör den med mitt humör? I denna akrobatiska vindodyssé skapas magi för barnen som känner vinden mot sin hud när dramat som utspelar sig blåser över scenen.</p><p><strong>Föreställningslängd:</strong> ca 30 min</p><p> </p><p><strong>Koncept och regi</strong> Lena Bruun Bondeson <strong>Medverkande </strong>Lilja Fredrikson och Anna Lagerkvist <strong>Scenografi, kostym och mask </strong>Lina Serning <strong>Musik och ljuddesign </strong>Bernt Karsten Sannerud <strong>Dramaturg </strong>Moa Backman <strong>Ljusdesign </strong>Magnus Pettersson <strong>Teknik </strong>Anthony Cooks <strong>Scenografiassistent </strong>Noomi Knape Pyk <strong>Dekorbygge </strong>Svensk Dekorproduktion AB <strong>Foto och film</strong> Thomas Zamolo <strong>Producent </strong>Lina Karlmark</p>",
+    "price_range": [
+      120.0,
+      150.0
+    ],
+    "ticket_link": "https://kulturbiljetter.se/varukorg/6779/32716/vindlaboratoriet-2-4-%C3%A5r/",
+    "start_datetime": "2024-11-30T12:00:00Z",
+    "date_tickets_sale_start": "2023-12-01T08:00:00Z"
+  }
+}

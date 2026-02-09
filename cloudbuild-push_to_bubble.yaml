@@ -1,0 +1,63 @@
+timeout: '600s'  # Timeout is now at the top level
+
+options:
+  logging: CLOUD_LOGGING_ONLY  # or NONE
+
+substitutions:
+  _REGION: 'europe-north1'
+  _PYTHON_VERSION: 'python312'
+  _CLOUD_FUNCTIONS_SERVICE_ACCOUNT: 'cloud-functions@digga-se.iam.gserviceaccount.com'
+  _DEFAULT_MEMORY: '256Mi'
+  _DEFAULT_CONCURRENCY: '1'  # Concurrency set to 1
+  _DEFAULT_MAX_INSTANCES: '1'
+  _DEFAULT_CPU: '0.1'
+  # Database variables
+  _DB_INSTANCE_CONNECTION_NAME: 'digga-se:europe-north1:digga-db'
+  _DB_NAME: 'events'
+  _DB_USER: 'postgres'
+
+steps:
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    id: 'Deploy push_to_bubble function'
+    waitFor: ['-']
+    dir: 'cloud_functions/push_to_bubble'
+    args:
+      - gcloud
+      - functions
+      - deploy
+      - push_to_bubble
+      - --gen2
+      - --region
+      - $_REGION
+      - --runtime
+      - $_PYTHON_VERSION
+      - --source
+      - .
+      # The function details
+      - --entry-point
+      - push_to_bubble
+      - --set-env-vars
+      - DB_INSTANCE_CONNECTION_NAME=$_DB_INSTANCE_CONNECTION_NAME
+      - --set-env-vars
+      - DB_NAME=$_DB_NAME
+      - --set-env-vars
+      - DB_USER=$_DB_USER
+      - --set-env-vars
+      - ENDPOINT_URL=https://digga-app.bubbleapps.io/version-live/api/1.1/wf/event
+      - --set-secrets
+      - DB_PASSWORD=events_db_password:1
+      - --set-secrets
+      - TOKEN=bubble_token:1
+      # Other settings
+      - --trigger-topic
+      - sync_to_external
+      - --service-account
+      - $_CLOUD_FUNCTIONS_SERVICE_ACCOUNT
+      - --memory
+      - $_DEFAULT_MEMORY
+      - --concurrency
+      - $_DEFAULT_CONCURRENCY
+      - --max-instances
+      - $_DEFAULT_MAX_INSTANCES
+      - --cpu
+      - $_DEFAULT_CPU

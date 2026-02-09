@@ -1,0 +1,34 @@
+{
+  "source": "tickster",
+  "source_data": {
+    "name": "Begynnelsen",
+    "tags": [
+      "conventum",
+      "conventumkongress",
+      "konsert",
+      "örebro",
+      "kongress"
+    ],
+    "image": "https://static.tickster.com/1a/c7209da069976fea9f9af8ccf7d866ba8c756b",
+    "venue": {
+      "city": "Örebro",
+      "name": "Conventum Kongress",
+      "zipcode": 70223,
+      "coordinates": {
+        "latitude": 59.2694,
+        "longitude": 15.2072
+      },
+      "address_text": "Fabriksgatan 17-19"
+    },
+    "currency": "SEK",
+    "event_id": "67kx86l59m5mh0r",
+    "organizer": "Conventum",
+    "description": "<p><strong>Dörrar</strong>: 18.30 | <strong>Show</strong>: 19:30 | <strong>Slut</strong>: 21:00 | <strong>Paus</strong>: Nej | <strong>Åldersgräns</strong>: 13år</p>\n<p><strong>Efter ett utsålt succéår 2023 är de tillbaka, maffigare än någonsin!</strong></p>\n<p>Under hösten ger sig två av Sveriges mest populära poddare och TV-profiler ut på Sverigeturné med showen “Begynnelsen” i samarbete med Perfect Day Media.</p>\n<p>Carolina Gynning och Carina Berg, en duo som inte gått någon förbi. I podcasten “Gynning & Berg” delar de med sig av sina liv på ett öppet och humoristiskt sätt. Nu lämnar de poddstudion och ger sig ut på vägarna med showen BEGYNNELSEN som citat: “Inte är nån j*vla livepodd!” - i ren och skär Gynning och Berg anda.</p>\n<p>När tjejerna äntrar scenen bjuds det på en show full av humor, dans, sång och (kanske) några visdomsord.</p>\n<p><em>Regissör: Robin Muhr</em></p>\n<p>Mer info: <a href=\"http://www.conventum.se\" rel=\"nofollow\">www.conventum.se/</a></p>\n",
+    "price_range": [
+      490
+    ],
+    "ticket_link": "https://secure.tickster.com/67kx86l59m5mh0r",
+    "end_datetime": "2024-12-07T20:00:00Z",
+    "start_datetime": "2024-12-07T18:30:00Z"
+  }
+}

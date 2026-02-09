@@ -1,0 +1,22 @@
+{
+  "source": "nortic",
+  "source_data": {
+    "name": "T-CENTRALEN",
+    "venue": {
+      "name": "Arken Värnamo",
+      "zipcode": 33131,
+      "address_text": "Värnamo, Pumparegatan 20"
+    },
+    "currency": "SEK",
+    "event_id": "247322",
+    "organizer": "Gullbrannafestivalen",
+    "description": "<p>Vi &auml;r mycket glada att kunna presentera T-centralen i V&auml;rnamo igen. Kv&auml;llen kommer inneh&aring;lla en h&auml;rlig mix av konserter, undervisning, lovs&aring;ng mm.<br>Entr&eacute;: 140kr h&auml;r p&aring; www.nortic.se eller swish p&aring; plats.</p>\r\n<p>17.45 &nbsp; INSL&Auml;PP STARTAR<br>18.30 &nbsp; OLLE<br>19.00 &nbsp; PARAFRAS - RICKARD SUNDSTR&Ouml;M<br>19.20 &nbsp; PAUS<br>19.30 &nbsp; SAMUEL LJUNGBLAHD &amp; LIN D<br>20.40 &nbsp; PAUS<br>21.10 &nbsp; &Aring;RETS LEDARE<br>21.15 &nbsp; GUDSTJ&Auml;NST &ndash; RICKARD SUNDSTR&Ouml;M<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; VIKTOR ALNERVIK MED BAND<br>23.00 &nbsp; SLUT<br>V&Auml;LKOMNA!<span></span></p>",
+    "price_range": [
+      140.0,
+      140.0
+    ],
+    "ticket_link": "https://www.nortic.se/ticket/show/247322",
+    "end_datetime": "2024-10-04T23:30:00Z",
+    "start_datetime": "2024-10-04T18:30:00Z"
+  }
+}

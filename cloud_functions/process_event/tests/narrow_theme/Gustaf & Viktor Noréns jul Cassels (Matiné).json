@@ -1,0 +1,27 @@
+{
+  "source": "tickster",
+  "source_data": {
+    "name": "Gustaf & Viktor Noréns jul | Cassels (Matiné)",
+    "image": "https://static.tickster.com/c8/bcd2d63c1fd7f4bc676530a3a6e01cfe559a83",
+    "venue": {
+      "city": "Grängesberg",
+      "name": "Cassel Grängesberg",
+      "zipcode": 72240,
+      "coordinates": {
+        "latitude": 60.0787,
+        "longitude": 14.9851
+      },
+      "address_text": "Bergsmansvägen 33"
+    },
+    "currency": "SEK",
+    "event_id": "7jy76fudz07ryyu",
+    "organizer": "Jubel",
+    "description": "<h3>Gustaf & Viktor Norén åker på julturné</h3>\n<h3></h3>\n<p>På allmän begäran blir det i vinter närmare 30 julkonserter i hela Sverige med Gustaf & Viktor Norén och många konserter är redan slutsålda. Mellan 26-30 november kommer bröderna till sitt älskade Grängesberg för att göra hela sex konserter på Cassels varav en är matiné konsert 30 november.</p>\n<p>När Gustaf och Viktor Norén bjuder in till julfirande så är det gemenskapen som står i fokus med musiken som den förenande kraften. Precis som förra året kommer bröderna att framföra musiken själva utan band.</p>\n<p>– Det här blir den absolut största och mest omfattande turné vi någonsin har gjort. Bandet till vår publik blir starkare för varje år, och i år vill vi tillsammans skapa något som verkligen stannar kvar länge i hjärtat. En turnerande låga över landet i vintermörkret. Både jag och Gustaf är övertygade om att i en värld där behovet av gemenskap aldrig varit större, är musiken den största av alla förenande krafter. Så vi längtar efter att få förenas i kärlek, hopp, värme, skratt, gråt och äkta julstämning, hälsar Viktor Norén</p>\n<p>Bröderna Norén har alltid strävat efter att bygga traditioner med sin publik och deras julkonserter har blivit en jultradition hos många. 2019 gjorde de en turné där de besökte kyrkor och sen 2021 har de haft Filadelfia i Stockholm som en fast plats – som blandats med mindre och intimare spelställen och 2022 med en slutsåld arenakonsert på Tegera Arena i Leksand. 2024 är inget undantag och i år gör de sin största turné någonsin för att publiken i hela landet och bjuda på folkkära jullåtar samt favoriter från brödernas egna och gemensamma låtkataloger.</p>\n<ul>\n<li>Dörrar öppnar: 15.00</li>\n<li>Konsertstart: 16.00</li>\n</ul>\n<p>Ingen åldersgräns. Ledsagare går in gratis mot att de visar giltigt ledsagarbevis.</p>\n",
+    "price_range": [
+      595
+    ],
+    "ticket_link": "https://secure.tickster.com/7jy76fudz07ryyu",
+    "end_datetime": "2024-11-30T17:00:00Z",
+    "start_datetime": "2024-11-30T15:00:00Z"
+  }
+}

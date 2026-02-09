@@ -1,0 +1,35 @@
+{
+  "source": "tickster",
+  "source_data": {
+    "name": "Bamse och Sjörövarskatten",
+    "tags": [
+      "slagthuset",
+      "teater",
+      "Familj",
+      "Barn",
+      "Musik",
+      "Bamse",
+      "Linus Wahlgren",
+      "Marko ‘Markoolio’ Lehtosalo",
+      "Tomas Bolme"
+    ],
+    "image": "https://static.tickster.com/e3/15648ac0467938b2ccd58e36f9b73023f3eb35",
+    "venue": {
+      "city": "Malmö",
+      "name": "Slagthusets Teater",
+      "zipcode": 21120,
+      "address_text": "Navigationsgatan 4"
+    },
+    "currency": "SEK",
+    "event_id": "yjh2cfbf1jnfa97",
+    "organizer": "Slagthuset",
+    "description": "<p><strong>Bamse Productions AB<br />\nLängd ca 50 minuter + meet and greet<br />\nDörrarna öppnas 1 timme innan show.<br />\nFri ålder - rekommenderad för barn 2–9 år.<br />\nTa gärna med en bilkudde eller liknande för att barnen ska komma högre upp i stolarna.</strong></p>\n<p>Varmt välkomna till en spännande teaterföreställning om jakten på den försvunna skatten med världens starkaste björn – Bamse.</p>\n<p>Bamse och Sjörövarskatten är en nyskriven teaterföreställning för hela familjen. En spännande och fartfylld show där vi förutom Bamse även får träffa Lille Skutt, Kapten Buster och Stollen.</p>\n<p>Äventyret börjar på Farmors vind där Bamse och Lille Skutt hittar en gammal skattkarta. Den väcker äventyrslusten och de ger sig iväg på en resa till Söderhavet. Väl på plats märker de att de inte är ensamma. På samma ö befinner sig nämligen sjörövaren Kapten Buster och hans tokiga major, Stollen. I stället för en lugn och behaglig resa i Söderhavet för Bamse och Lille Skutt väntar ett äventyr med spänning, action och oväntade händelser i jakten på skatten.</p>\n<p>Bamse och Sjörövarskatten är en interaktiv föreställning, där karaktärerna behöver publikens hjälp för att lösa problem som dyker upp längs vägen fram till skatten. Samarbete är ledordet för showen och därför får alla barn som hjälpt till en belöning när föreställningen är slut.</p>\n<p>Föreställningen innehåller ljud- och ljuseffekter.</p>\n<p>Röster:<br />\n<strong>Bamse – Linus Wahlgren<br />\nLille Skutt – Morgan Alling<br />\nKapten Buster – Marko ‘Markoolio’ Lehtosalo<br />\nBerättarröst – Tomas Bolme</strong></p>\n<p>Om BAMSE på turné:<br />\nBamse Productions har under de senaste åren producerat en rad olika teaterföreställningar som turnerat över hela Sverige med vår allra käraste björn i huvudrollen. I Bamse och Sjörövarskatten är det första gången vi får möta Kapten Buster och Stollen i ett live-sammanhang. Bamse och Sjörövarskatten är skriven och producerad av Kenny Mattsson.</p>\n<p>Barn under 2 år gratis om de sitter i knät på medföljande betalande vuxen</p>\n",
+    "price_range": [
+      0,
+      395
+    ],
+    "ticket_link": "https://secure.tickster.com/yjh2cfbf1jnfa97",
+    "end_datetime": "2024-11-30T11:00:00Z",
+    "start_datetime": "2024-11-30T10:00:00Z"
+  }
+}

@@ -1,0 +1,156 @@
+timeout: '600s'  # Timeout is now at the top level
+
+options:
+  logging: CLOUD_LOGGING_ONLY  # or NONE
+
+substitutions:
+  _REGION: 'europe-north1'
+  _PYTHON_VERSION: 'python312'
+  _CLOUD_FUNCTIONS_SERVICE_ACCOUNT: 'cloud-functions@digga-se.iam.gserviceaccount.com'
+  _DEFAULT_MEMORY: '256Mi'
+  _DEFAULT_CONCURRENCY: '1'  # Concurrency set to 1
+  _DEFAULT_MAX_INSTANCES: '1'
+  _DEFAULT_CPU: '0.1'
+  # Common database variables
+  _DB_INSTANCE_CONNECTION_NAME: 'digga-se:europe-north1:digga-db'
+  _DB_NAME: 'events'
+  _DB_USER: 'postgres'
+
+steps:
+  # Deploy create_venue function
+  - name: 'gcr.io/cloud-builders/gcloud'
+    id: 'Deploy create_venue'
+    waitFor: [ '-' ]
+    args:
+      - functions
+      - deploy
+      - create_venue
+      - --gen2
+      - --runtime
+      - $_PYTHON_VERSION
+      - --source
+      - .
+      - --trigger-http
+      - --allow-unauthenticated  # Publicly accessible
+      - --entry-point
+      - create_venue
+      - --region
+      - $_REGION
+      - --service-account
+      - $_CLOUD_FUNCTIONS_SERVICE_ACCOUNT
+      - --memory
+      - $_DEFAULT_MEMORY
+      - --concurrency
+      - $_DEFAULT_CONCURRENCY
+      - --max-instances
+      - $_DEFAULT_MAX_INSTANCES
+      - --cpu
+      - $_DEFAULT_CPU
+      - --set-env-vars
+      - SECRET_NAME="AIRDEV_API_KEY",DB_USER=$_DB_USER,DB_NAME=$_DB_NAME,DB_INSTANCE_CONNECTION_NAME=$_DB_INSTANCE_CONNECTION_NAME
+      - --set-secrets
+      - DB_PASSWORD=events_db_password:1
+    dir: 'cloud_functions/create_venue'
+
+  # Deploy update_venue function
+  - name: 'gcr.io/cloud-builders/gcloud'
+    id: 'Deploy update_venue'
+    waitFor: [ '-' ]
+    args:
+      - functions
+      - deploy
+      - update_venue
+      - --gen2
+      - --runtime
+      - $_PYTHON_VERSION
+      - --source
+      - .
+      - --trigger-http
+      - --allow-unauthenticated  # Publicly accessible
+      - --entry-point
+      - update_venue
+      - --region
+      - $_REGION
+      - --service-account
+      - $_CLOUD_FUNCTIONS_SERVICE_ACCOUNT
+      - --memory
+      - $_DEFAULT_MEMORY
+      - --concurrency
+      - $_DEFAULT_CONCURRENCY
+      - --max-instances
+      - $_DEFAULT_MAX_INSTANCES
+      - --cpu
+      - $_DEFAULT_CPU
+      - --set-env-vars
+      - DB_USER=$_DB_USER,DB_NAME=$_DB_NAME,DB_INSTANCE_CONNECTION_NAME=$_DB_INSTANCE_CONNECTION_NAME
+      - --set-secrets
+      - DB_PASSWORD=events_db_password:1
+    dir: 'cloud_functions/update_venue'
+
+  # API Gateway: delete
+  - name: 'gcr.io/cloud-builders/gcloud'
+    id: 'Delete API Gateway'
+    waitFor: ['-']
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        if gcloud api-gateway gateways describe events-backend-api-gateway --location=europe-west1 --project=digga-se; then
+          echo "API Gateway exists. Deleting it."
+          gcloud api-gateway gateways delete events-backend-api-gateway \
+            --location=europe-west1 \
+            --quiet \
+            --project=digga-se
+        else
+          echo "API Gateway does not exist. No need to delete."
+        fi
+    dir: '.'
+
+  # API Gateway Config: delete
+  - name: 'gcr.io/cloud-builders/gcloud'
+    id: 'Delete API Config'
+    waitFor: ['Delete API Gateway']
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        if gcloud api-gateway api-configs describe events-backend-api-config --api=events-backend-api --project=digga-se; then
+          echo "API Config exists. Deleting it."
+          gcloud api-gateway api-configs delete events-backend-api-config \
+            --api=events-backend-api \
+            --quiet \
+            --project=digga-se
+        else
+          echo "API Config does not exist. No need to delete."
+        fi
+    dir: '.'
+
+  # API Gateway Config: deploy (create new)
+  - name: 'gcr.io/cloud-builders/gcloud'
+    id: 'Deploy API Config'
+    waitFor: ['Delete API Config']
+    args:
+      - api-gateway
+      - api-configs
+      - create
+      - events-backend-api-config
+      - --api=events-backend-api
+      - --openapi-spec=api/open_api.yaml
+      - --project=digga-se
+      - --backend-auth-service-account=${_CLOUD_FUNCTIONS_SERVICE_ACCOUNT}
+    dir: '.'
+
+  # API Gateway: deploy (create new)
+  - name: 'gcr.io/cloud-builders/gcloud'
+    id: 'Deploy API Gateway'
+    waitFor: ['Delete API Gateway', 'Deploy API Config']
+    args:
+      - api-gateway
+      - gateways
+      - create
+      - events-backend-api-gateway  # Updated API Gateway name
+      - --api=events-backend-api  # Updated API name
+      - --api-config=events-backend-api-config  # Updated API config name
+      - --location=europe-west1
+      - --project=digga-se
+    dir: '.'

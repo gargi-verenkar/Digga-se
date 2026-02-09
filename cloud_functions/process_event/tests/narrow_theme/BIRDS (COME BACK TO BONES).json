@@ -1,0 +1,28 @@
+{
+  "source": "tickster",
+  "source_data": {
+    "name": "BIRDS (COME BACK TO BONES)",
+    "image": "https://static.tickster.com/71/f2a89120c887f3259a0bfb25dd61dfd90f6835",
+    "venue": {
+      "city": "Landskrona",
+      "name": "Landskrona Teater",
+      "zipcode": 26131,
+      "coordinates": {
+        "latitude": 55.8704,
+        "longitude": 12.8325
+      },
+      "address_text": "Östergatan 18"
+    },
+    "currency": "SEK",
+    "event_id": "f14x57bwhwgaf18",
+    "organizer": "Landskrona stad KUL",
+    "description": "<p><strong>Har du någon som kommer och går i ditt liv?</strong></p>\n<p>I en intim duett utforskar två dansare vad självständighet och beroende kan betyda. Det blir en känslostark gestaltning av att flyga fritt och att bygga bo. Om avsked och hemkomst. I Birds (come back to bones) djupdyker dansarna i de traditionella dans- och nycirkusformerna Pas de deux (dans för två) och Parakrobatik, en cirkusgren som utförs utan redskap, med tonvikt på styrka och balans. Sittande på stolar runt dansmattan får vi uppleva dansen helt nära, samtidigt som verket erbjuder ett fågelperspektiv på samhörighet, vänskap och behovet av att vända hem.</p>\n<p>Riksteatern i samarbete med Dansinitiativet, Luleå.</p>\n<p><strong>Medverkande</strong><br />\nFabian Wixe och ytterligare en dansare</p>\n<p><strong>Konstnärligt team</strong><br />\nKoncept & koreografi: Marie Wårell och Fabian Wixe<br />\nLjusdesign: Maria Roos<br />\nLjuddesign: David Björkén<br />\nKostym: Lotta Högberg Andersson</p>\n<p>Läs mer om föreställningen <a href=\"https://www.riksteatern.se/forestallningar/birds-come-back-to-bones2/202412031900-125732L\" rel=\"nofollow\">här</a>.</p>\n<hr />\n<p>SERVERING I ANSLUTNING TILL FÖRESTÄLLNINGEN i både foajé och restaurang, i regi av Matscenen. Bordsreservation kan göras på <a href=\"https://www.matscenen.se\" rel=\"nofollow\">restaurangens hemsida</a>.</p>\n<hr />\n<p><strong>Arrangör</strong>\n<a href=\"https://www.riksteatern.se/landskrona\" rel=\"nofollow\">Landskrona Musik & Teater – en del av Riksteatern</a></p>\n",
+    "price_range": [
+      100,
+      200
+    ],
+    "ticket_link": "https://secure.tickster.com/f14x57bwhwgaf18",
+    "end_datetime": "2024-12-01T19:00:00Z",
+    "start_datetime": "2024-12-01T18:00:00Z"
+  }
+}

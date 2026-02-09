@@ -1,0 +1,31 @@
+{
+  "source": "tickster",
+  "source_data": {
+    "name": "Wreck of Blues Flying Circus LÖRDAG",
+    "tags": [
+      "blues",
+      "rock"
+    ],
+    "image": "https://static.tickster.com/9a/0e196b0c1c1a0233c2a201664ad142caa1f646",
+    "venue": {
+      "city": "Malmö",
+      "name": "medley – musik, mat & mer",
+      "zipcode": 21138,
+      "coordinates": {
+        "latitude": 55.6032,
+        "longitude": 13.0065
+      },
+      "address_text": "Södra Promenaden 51"
+    },
+    "currency": "SEK",
+    "event_id": "4nf6kxr365h1025",
+    "organizer": "medley",
+    "description": "<p>Bistro och bar öppnar klockan 17:00 På scen ca 20:00.</p>\n<p>DETTA ÄR LÖRDAGENS KONSERT</p>\n<p>Wreck of Blues Flying Circus med Pontus Snibb, Håkan Nyberg, Kalle Johansson, Magnus Nörrenberg + gäst: Tove Gustavsson! Konferencier: Dr. Rock!</p>\n<p>När vi avslutade sista Fjellisgalan på Victoria var ni många som sade: - Låt inte denna fina tradition dö!</p>\n<p>Vi kände precis samma sak. Vi har tagit dessa magiska konserter vidare. Två kvällar i slutet av januari så skapar vi tillsammans med er denna känsla igen. Med fantastiska gäster på Malmös bästa scen medley rullar Wreck of Blues Flying Circus in. Nu kör vi detta på medley för fjärde året. Tidigare har Clas Yngström, Leif Sundin, Janne Åström och Jalle Lorensson dykt upp. Nu blir det Tove Gustavsson: en av den nya generationens kvinnliga bluesartister som bluesscenen behöver. Tove sticker ut i mängden med helt egen originalmusik och en unik, mörk och hes stämma. En gäst till släpps längre fram. Spännande kvällar med en oväntad repertoar väntar. Detta vill du inte missa!</p>\n<p>Det är vi tillsammans som skapar stämningen och magin och för traditionen vidare.</p>\n<p>Åldersgräns 18-år. I målsmans sällskap 13-år.</p>\n<p>Om du vill äta innan konserten boka bord här: <a href=\"https://medleymalmo.se/boka-bord/\" target=\"blank\" rel=\"nofollow\">https://medleymalmo.se/boka-bord/</a></p>\n<p>Om du behöver boende i samband med konserten rekommenderar vi Hotel Garden ett par minuters promenad från medley: <a href=\"https://ligula.se/en/profilhotels/hotel-garden/\" target=\"blank\" rel=\"nofollow\">https://ligula.se/en/profilhotels/hotel-garden/</a></p>\n<p>Använd “corporate code” 985052 vid rumsbokning för 12% rabatt.</p>\n",
+    "price_range": [
+      295
+    ],
+    "ticket_link": "https://secure.tickster.com/4nf6kxr365h1025",
+    "end_datetime": "2025-01-25T22:00:00Z",
+    "start_datetime": "2025-01-25T19:00:00Z"
+  }
+}

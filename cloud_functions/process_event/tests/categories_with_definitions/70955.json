@@ -1,0 +1,17 @@
+{
+  "name": "Linje: Köpmanholmen - Trysunda",
+  "image": "https://branding.nortic.io/organizer/1363/event/65359?type=default&redirect=t",
+  "venue": {
+    "name": "M/F Ulvön"
+  },
+  "currency": "SEK",
+  "event_id": "265886",
+  "organizer": "Örnsköldsviks Hamn & Logistik AB",
+  "price_range": [
+    43.0,
+    85.0
+  ],
+  "ticket_link": "https://www.nortic.se/ticket/show/265886",
+  "end_datetime": "2025-10-24T06:15:00Z",
+  "start_datetime": "2025-10-24T06:15:00Z"
+}

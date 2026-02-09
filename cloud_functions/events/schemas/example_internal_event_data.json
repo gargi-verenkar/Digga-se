@@ -1,0 +1,51 @@
+{
+  "$schema": "internal_event_schema.json",
+  "source": "tickster",
+  "source_data": {
+    "name": "Rock Night",
+    "event_id": "13",
+    "description": "An exciting night of rock music with multiple bands performing live.",
+    "start_datetime": "2024-10-17T17:00:00Z",
+    "end_datetime": "2024-10-17T23:00:00Z",
+    "venue": {
+      "city": "Göteborg",
+      "address_text": "Gatan 1",
+      "zipcode": 40530,
+      "name": "The Great Hall",
+      "coordinates": {
+        "latitude": 55.8704,
+        "longitude": 12.8325
+      }
+    },
+    "currency": "SEK",
+    "price_range": [
+      250,
+      300
+    ],
+    "ticket_link": "https://example.com/tickets/rock-night",
+    "status": "Active",
+    "sold_out": false,
+    "date_tickets_sale_start": "2024-06-01T00:00:00Z",
+    "organizer": "Rock Events Co.",
+    "tags": [
+      "concert",
+      "outdoor"
+    ],
+    "image": "https://example.com/images/rock-night.jpg",
+    "artists": [
+      "Band A",
+      "Band B",
+      "Band C"
+    ]
+  },
+  "category_id": 3,
+  "theme_ids": [1],
+  "genre_ids": [
+    2,
+    3
+  ],
+  "subgenres": [
+    "k-pop"
+  ],
+  "venue_id": 1
+}

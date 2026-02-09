@@ -1,0 +1,20 @@
+{
+  "source": "svenskakyrkan",
+  "source_data": {
+    "name": "LLO Leenas Lilla Orkester",
+    "venue": {
+      "name": "Kungsbacka kyrka",
+      "coordinates": {
+        "latitude": 12.0770771319358,
+        "longitude": 57.4869647214793
+      },
+      "address_text": "Kyrkogatan 16"
+    },
+    "currency": "SEK",
+    "event_id": "33c13e620700452ba2b813926cf92460",
+    "organizer": "Kungsbacka-Hanhals församling",
+    "description": "En stråkorkester för dig med viss spelvana och längtan efter en orkester där spelglädjen står i centrum.",
+    "end_datetime": "2024-09-30T19:00:00Z",
+    "start_datetime": "2024-09-30T17:00:00Z"
+  }
+}

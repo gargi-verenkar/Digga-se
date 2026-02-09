@@ -1,0 +1,27 @@
+{
+  "name": "Jönssonligan kommer tillbaka (Sv. txt) (Sv. tal)",
+  "tags": [
+    "bio"
+  ],
+  "image": "https://static.tickster.com/b6/94fe19dbc17bea5a793009aad34f95d7e4ab77",
+  "venue": {
+    "city": "Emmaboda",
+    "name": "Emmaboda Folkets Hus",
+    "zipcode": 36121,
+    "coordinates": {
+      "latitude": 56.6292,
+      "longitude": 15.5473
+    },
+    "address_text": "Box 1"
+  },
+  "currency": "SEK",
+  "event_id": "l2jhavt835xyxux",
+  "organizer": "Emmaboda Folketshus",
+  "description": "<p>Efter år på flykt återförenas Sickan med Vanheden, Harry och Doris för en ny kupp. Planen, tajmad in i minsta detalj, är att stjäla ett komplett T-rex-skelett från Naturhistoriska riksmuseet och sälja det till den skrupelfrie affärsmannen Wall Enberg för 320 miljoner kronor. De har dock inte räknat med Rigmor Gren, en åldrad kriminalare, besatt av idén att ställa Jönsson inför rätta innan hon själv går i pension.</p>\n",
+  "price_range": [
+    120
+  ],
+  "ticket_link": "https://secure.tickster.com/l2jhavt835xyxux",
+  "end_datetime": "2024-12-08T19:44:00Z",
+  "start_datetime": "2024-12-08T18:00:00Z"
+}

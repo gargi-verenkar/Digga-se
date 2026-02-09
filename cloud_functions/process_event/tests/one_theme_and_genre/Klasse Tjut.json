@@ -1,0 +1,32 @@
+{
+  "source": "tickster",
+  "source_data": {
+    "name": "Klasse Tjut",
+    "tags": [
+      "Komedi",
+      "Teater"
+    ],
+    "image": "https://static.tickster.com/8c/1acfc42663d5eacbaf9d88fb09b64621cf50d6",
+    "venue": {
+      "city": "Åby",
+      "name": "Åby Folkets Hus",
+      "zipcode": 61633,
+      "coordinates": {
+        "latitude": 58.6704,
+        "longitude": 16.1899
+      },
+      "address_text": "G:a Stockholmsvägen 38"
+    },
+    "currency": "SEK",
+    "event_id": "8uaf5jxak1zg618",
+    "organizer": "Riksteatern Nkpg",
+    "description": "<p>Klasse Tjut är ett berättande skådespel i två akter med fyra skådespelare på en öppen yta, med publiken runt omkring. Publiken kommer också agera fond till det som berättas, t.ex. i form av hejarklack, buggande par eller gäster på julfest.</p>\n<p>-Jag minns mina föräldrars oro när vår byaffär var hotad. \"Faller en av de tre så dör byn\" sa de. Affären, skolan och arbetsplatsen. Affären skulle räddas, det gick ett tag.</p>\n<p>På den tiden gick det att köpa tidningen även om Kerstin hade stängt genom att lägga en tia i en hink utanför och ta en tidning. Nuförtiden är det.. tja typ samma. Man måste bara ha en app i telefonen för att blippa in sig till den numera Kerstinlösa helt digitaliserade affären.</p>\n<p>Detta är en berättelse om det lilla företaget i den lilla byn, det stora småpratet i byn samt Klasse Tjut. Han har stora problem med småsaker som ett fungerande wi-fi i bygdegården. De stora problemen, som hans företag, sjukdom och skilsmässa, upptar mindre plats. Invasiva arter som danska bugginstruktörer och lupiner gäckar samhället. Vädret är inte sig likt längre och hur mår man när allt är på väg åt helvete.</p>\n<ul>\n<li>Peter Jansson</li>\n</ul>\n<p><strong>Medverkande</strong></p>\n<p>Jesper Barkselius, Caroline Harrysson, Karin Oscarsson, Joel Ödmann</p>\n<p><strong>Konstnärligt team</strong></p>\n<p>Manus, regi, scenografi: Peter Jansson</p>\n<p>Kostym: Peter Jansson och ensemblen</p>\n<p>Mask: John Hanna</p>\n<p>Föreställningslängd ca 2 timmar inkl. paus</p>\n<p>Producent Östgötateatern</p>\n",
+    "price_range": [
+      50,
+      250
+    ],
+    "ticket_link": "https://secure.tickster.com/8uaf5jxak1zg618",
+    "end_datetime": "2025-04-02T19:00:00Z",
+    "start_datetime": "2025-04-02T17:00:00Z"
+  }
+}

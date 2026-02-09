@@ -1,0 +1,36 @@
+{
+  "name": "CLUB BINGO",
+  "tags": [
+    "bar",
+    "göteborg",
+    "humor",
+    "impro",
+    "improvisationsteater",
+    "komedi",
+    "nöje",
+    "restaurang",
+    "teater"
+  ],
+  "image": "https://branding.nortic.io/organizer/2932/event/52266?type=default&redirect=t",
+  "venue": {
+    "city": "Göteborg",
+    "name": "Kvarterscenen 2 Lång",
+    "zipcode": 41103,
+    "coordinates": {
+      "latitude": 11.97431,
+      "longitude": 57.70831
+    },
+    "address_text": "Drottningtorget 7"
+  },
+  "currency": "SEK",
+  "event_id": "236636",
+  "organizer": "Kvartersscenen 2Lång",
+  "description": "",
+  "price_range": [
+    176.0,
+    280.0
+  ],
+  "ticket_link": "https://www.nortic.se/ticket/show/236636",
+  "end_datetime": "2024-10-25T17:30:00Z",
+  "start_datetime": "2024-10-25T17:30:00Z"
+}

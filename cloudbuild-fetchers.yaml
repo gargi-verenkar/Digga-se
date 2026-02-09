@@ -1,0 +1,1120 @@
+timeout: '600s'
+
+options:
+  logging: CLOUD_LOGGING_ONLY
+
+substitutions:
+  _REGION: 'europe-north1'
+  _PYTHON_VERSION: 'python312'
+  _CLOUD_FUNCTIONS_SERVICE_ACCOUNT: 'cloud-functions@digga-se.iam.gserviceaccount.com'
+  _DEFAULT_MEMORY: '384Mi'
+  _DEFAULT_CONCURRENCY: '1'
+  _DEFAULT_MAX_INSTANCES: '1'
+  _DEFAULT_TIMEOUT: '1200'
+  _DEFAULT_CPU: '0.1'
+  _PUBSUB_TOPIC: 'events'
+  _DB_INSTANCE_CONNECTION_NAME: 'digga-se:europe-north1:digga-db'
+  _DB_NAME: 'events'
+  _DB_USER: 'postgres'
+
+steps:
+  # Axs fetcher
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    id: 'Deploy Axs fetcher'
+    waitFor: ['-']
+    dir: 'cloud_functions/events'
+    args:
+      - gcloud
+      - functions
+      - deploy
+      - fetch_axs
+      - --gen2
+      - --region
+      - europe-central2
+      - --runtime
+      - $_PYTHON_VERSION
+      - --source
+      - .
+      # The function details
+      - --entry-point
+      - fetch_axs
+      - --set-env-vars
+      - DB_INSTANCE_CONNECTION_NAME=$_DB_INSTANCE_CONNECTION_NAME
+      - --set-env-vars
+      - DB_NAME=$_DB_NAME
+      - --set-env-vars
+      - DB_USER=$_DB_USER
+      - --set-env-vars
+      - GCP_PROJECT=$PROJECT_ID
+      - --set-env-vars
+      - PUBSUB_TOPIC=$_PUBSUB_TOPIC
+      - --set-secrets
+      - DB_PASSWORD=events_db_password:1
+      - --set-secrets
+      - AXS_API_KEY=axs_api_key:1
+      # Other settings
+      - --trigger-http
+      - --egress-settings
+      - all
+      - --vpc-connector
+      - fetcher-vpc-connector
+      - --service-account
+      - $_CLOUD_FUNCTIONS_SERVICE_ACCOUNT
+      - --memory
+      - $_DEFAULT_MEMORY
+      - --concurrency
+      - $_DEFAULT_CONCURRENCY
+      - --max-instances
+      - $_DEFAULT_MAX_INSTANCES
+      - --timeout
+      - $_DEFAULT_TIMEOUT
+      - --cpu
+      - $_DEFAULT_CPU
+  # Billetto fetcher
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    id: 'Deploy Billetto fetcher'
+    waitFor: ['-']
+    dir: 'cloud_functions/events'
+    args:
+      - gcloud
+      - functions
+      - deploy
+      - fetch_billetto
+      - --gen2
+      - --region
+      - $_REGION
+      - --runtime
+      - $_PYTHON_VERSION
+      - --source
+      - .
+      # The function details
+      - --entry-point
+      - fetch_billetto
+      - --set-env-vars
+      - DB_INSTANCE_CONNECTION_NAME=$_DB_INSTANCE_CONNECTION_NAME
+      - --set-env-vars
+      - DB_NAME=$_DB_NAME
+      - --set-env-vars
+      - DB_USER=$_DB_USER
+      - --set-env-vars
+      - GCP_PROJECT=$PROJECT_ID
+      - --set-env-vars
+      - PUBSUB_TOPIC=$_PUBSUB_TOPIC
+      - --set-secrets
+      - DB_PASSWORD=events_db_password:1
+      - --set-secrets
+      - BILLETTO_API_KEY=billetto_api_key:1
+      # Other settings
+      - --trigger-http
+      - --service-account
+      - $_CLOUD_FUNCTIONS_SERVICE_ACCOUNT
+      - --memory
+      - $_DEFAULT_MEMORY
+      - --concurrency
+      - $_DEFAULT_CONCURRENCY
+      - --max-instances
+      - $_DEFAULT_MAX_INSTANCES
+      - --timeout
+      - $_DEFAULT_TIMEOUT
+      - --cpu
+      - $_DEFAULT_CPU
+  # Eventim fetcher
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    id: 'Deploy Eventim fetcher'
+    waitFor: ['-']
+    dir: 'cloud_functions/events'
+    args:
+      - gcloud
+      - functions
+      - deploy
+      - fetch_eventim
+      - --gen2
+      - --region
+      - $_REGION
+      - --runtime
+      - $_PYTHON_VERSION
+      - --source
+      - .
+      # The function details
+      - --entry-point
+      - fetch_eventim
+      - --set-env-vars
+      - DB_INSTANCE_CONNECTION_NAME=$_DB_INSTANCE_CONNECTION_NAME
+      - --set-env-vars
+      - DB_NAME=$_DB_NAME
+      - --set-env-vars
+      - DB_USER=$_DB_USER
+      - --set-env-vars
+      - GCP_PROJECT=$PROJECT_ID
+      - --set-env-vars
+      - PUBSUB_TOPIC=$_PUBSUB_TOPIC
+      - --set-secrets
+      - DB_PASSWORD=events_db_password:1
+      - --set-secrets
+      - EVENTIM_USERNAME=eventim_username:1
+      - --set-secrets
+      - EVENTIM_PASSWORD=eventim_password:1
+      # Other settings
+      - --trigger-http
+      - --service-account
+      - $_CLOUD_FUNCTIONS_SERVICE_ACCOUNT
+      - --memory
+      - $_DEFAULT_MEMORY
+      - --concurrency
+      - $_DEFAULT_CONCURRENCY
+      - --max-instances
+      - $_DEFAULT_MAX_INSTANCES
+      - --timeout
+      - $_DEFAULT_TIMEOUT
+      - --cpu
+      - $_DEFAULT_CPU
+  # Folkoperan fetcher
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    id: 'Deploy Folkoperan fetcher'
+    waitFor: ['-']
+    dir: 'cloud_functions/events'
+    args:
+      - gcloud
+      - functions
+      - deploy
+      - fetch_folkoperan
+      - --gen2
+      - --region
+      - $_REGION
+      - --runtime
+      - $_PYTHON_VERSION
+      - --source
+      - .
+      # The function details
+      - --entry-point
+      - fetch_folkoperan
+      - --set-env-vars
+      - DB_INSTANCE_CONNECTION_NAME=$_DB_INSTANCE_CONNECTION_NAME
+      - --set-env-vars
+      - DB_NAME=$_DB_NAME
+      - --set-env-vars
+      - DB_USER=$_DB_USER
+      - --set-env-vars
+      - GCP_PROJECT=$PROJECT_ID
+      - --set-env-vars
+      - PUBSUB_TOPIC=$_PUBSUB_TOPIC
+      - --set-secrets
+      - DB_PASSWORD=events_db_password:1
+      - --set-secrets
+      - FOLKOPERAN_API_KEY=folkoperan_api_key:1
+      # Other settings
+      - --trigger-http
+      - --service-account
+      - $_CLOUD_FUNCTIONS_SERVICE_ACCOUNT
+      - --memory
+      - $_DEFAULT_MEMORY
+      - --concurrency
+      - $_DEFAULT_CONCURRENCY
+      - --max-instances
+      - $_DEFAULT_MAX_INSTANCES
+      - --timeout
+      - $_DEFAULT_TIMEOUT
+      - --cpu
+      - $_DEFAULT_CPU
+  # Gröna Lund fetcher
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    id: 'Deploy Gröna Lund fetcher'
+    waitFor: [ '-' ]
+    dir: 'cloud_functions/events'
+    args:
+      - gcloud
+      - functions
+      - deploy
+      - fetch_gronalund
+      - --gen2
+      - --region
+      - $_REGION
+      - --runtime
+      - $_PYTHON_VERSION
+      - --source
+      - .
+      # The function details
+      - --entry-point
+      - fetch_gronalund
+      - --set-env-vars
+      - DB_INSTANCE_CONNECTION_NAME=$_DB_INSTANCE_CONNECTION_NAME
+      - --set-env-vars
+      - DB_NAME=$_DB_NAME
+      - --set-env-vars
+      - DB_USER=$_DB_USER
+      - --set-env-vars
+      - GCP_PROJECT=$PROJECT_ID
+      - --set-env-vars
+      - PUBSUB_TOPIC=$_PUBSUB_TOPIC
+      - --set-secrets
+      - DB_PASSWORD=events_db_password:1
+      # Other settings
+      - --trigger-http
+      - --service-account
+      - $_CLOUD_FUNCTIONS_SERVICE_ACCOUNT
+      - --memory
+      - 512Mi
+      - --concurrency
+      - $_DEFAULT_CONCURRENCY
+      - --max-instances
+      - $_DEFAULT_MAX_INSTANCES
+      - --timeout
+      - $_DEFAULT_TIMEOUT
+      - --cpu
+      - $_DEFAULT_CPU
+  # Kulturbiljetter fetcher
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    id: 'Deploy Kulturbiljetter fetcher'
+    waitFor: ['-']
+    dir: 'cloud_functions/events'
+    args:
+      - gcloud
+      - functions
+      - deploy
+      - fetch_kulturbiljetter
+      - --gen2
+      - --region
+      - $_REGION
+      - --runtime
+      - $_PYTHON_VERSION
+      - --source
+      - .
+      # The function details
+      - --entry-point
+      - fetch_kulturbiljetter
+      - --set-env-vars
+      - DB_INSTANCE_CONNECTION_NAME=$_DB_INSTANCE_CONNECTION_NAME
+      - --set-env-vars
+      - DB_NAME=$_DB_NAME
+      - --set-env-vars
+      - DB_USER=$_DB_USER
+      - --set-env-vars
+      - GCP_PROJECT=$PROJECT_ID
+      - --set-env-vars
+      - PUBSUB_TOPIC=$_PUBSUB_TOPIC
+      - --set-secrets
+      - DB_PASSWORD=events_db_password:1
+      - --set-secrets
+      - KULTURBILJETTER_API_KEY=kulturbiljetter_api_key:2
+      # Other settings
+      - --trigger-http
+      - --service-account
+      - $_CLOUD_FUNCTIONS_SERVICE_ACCOUNT
+      - --memory
+      - $_DEFAULT_MEMORY
+      - --concurrency
+      - $_DEFAULT_CONCURRENCY
+      - --max-instances
+      - $_DEFAULT_MAX_INSTANCES
+      - --timeout
+      - $_DEFAULT_TIMEOUT
+      - --cpu
+      - $_DEFAULT_CPU
+  # Kulturhuset Stadsteatern fetcher
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    id: 'Deploy Kulturhuset Stadsteatern fetcher'
+    waitFor: [ '-' ]
+    dir: 'cloud_functions/events'
+    args:
+      - gcloud
+      - functions
+      - deploy
+      - fetch_kulturhusetstadsteatern
+      - --gen2
+      - --region
+      - $_REGION
+      - --runtime
+      - $_PYTHON_VERSION
+      - --source
+      - .
+      # The function details
+      - --entry-point
+      - fetch_kulturhusetstadsteatern
+      - --set-env-vars
+      - DB_INSTANCE_CONNECTION_NAME=$_DB_INSTANCE_CONNECTION_NAME
+      - --set-env-vars
+      - DB_NAME=$_DB_NAME
+      - --set-env-vars
+      - DB_USER=$_DB_USER
+      - --set-env-vars
+      - GCP_PROJECT=$PROJECT_ID
+      - --set-env-vars
+      - PUBSUB_TOPIC=$_PUBSUB_TOPIC
+      - --set-secrets
+      - DB_PASSWORD=events_db_password:1
+      # Other settings
+      - --trigger-http
+      - --service-account
+      - $_CLOUD_FUNCTIONS_SERVICE_ACCOUNT
+      - --memory
+      - 512Mi
+      - --concurrency
+      - $_DEFAULT_CONCURRENCY
+      - --max-instances
+      - $_DEFAULT_MAX_INSTANCES
+      - --timeout
+      - $_DEFAULT_TIMEOUT
+      - --cpu
+      - $_DEFAULT_CPU
+  # Nortic fetcher
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    id: 'Deploy Nortic fetcher'
+    waitFor: ['-']
+    dir: 'cloud_functions/events'
+    args:
+      - gcloud
+      - functions
+      - deploy
+      - fetch_nortic
+      - --gen2
+      - --region
+      - $_REGION
+      - --runtime
+      - $_PYTHON_VERSION
+      - --source
+      - .
+      # The function details
+      - --entry-point
+      - fetch_nortic
+      - --set-env-vars
+      - DB_INSTANCE_CONNECTION_NAME=$_DB_INSTANCE_CONNECTION_NAME
+      - --set-env-vars
+      - DB_NAME=$_DB_NAME
+      - --set-env-vars
+      - DB_USER=$_DB_USER
+      - --set-env-vars
+      - GCP_PROJECT=$PROJECT_ID
+      - --set-env-vars
+      - PUBSUB_TOPIC=$_PUBSUB_TOPIC
+      - --set-secrets
+      - DB_PASSWORD=events_db_password:1
+      # Other settings
+      - --trigger-http
+      - --service-account
+      - $_CLOUD_FUNCTIONS_SERVICE_ACCOUNT
+      - --memory
+      - 1Gi
+      - --concurrency
+      - $_DEFAULT_CONCURRENCY
+      - --max-instances
+      - $_DEFAULT_MAX_INSTANCES
+      - --timeout
+      - $_DEFAULT_TIMEOUT
+      - --cpu
+      - '0.5'
+  # Ravinen fetcher
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    id: 'Deploy Ravinen fetcher'
+    waitFor: [ '-' ]
+    dir: 'cloud_functions/events'
+    args:
+      - gcloud
+      - functions
+      - deploy
+      - fetch_ravinen
+      - --gen2
+      - --region
+      - $_REGION
+      - --runtime
+      - $_PYTHON_VERSION
+      - --source
+      - .
+      # The function details
+      - --entry-point
+      - fetch_ravinen
+      - --set-env-vars
+      - DB_INSTANCE_CONNECTION_NAME=$_DB_INSTANCE_CONNECTION_NAME
+      - --set-env-vars
+      - DB_NAME=$_DB_NAME
+      - --set-env-vars
+      - DB_USER=$_DB_USER
+      - --set-env-vars
+      - GCP_PROJECT=$PROJECT_ID
+      - --set-env-vars
+      - PUBSUB_TOPIC=$_PUBSUB_TOPIC
+      - --set-secrets
+      - DB_PASSWORD=events_db_password:1
+      # Other settings
+      - --trigger-http
+      - --service-account
+      - $_CLOUD_FUNCTIONS_SERVICE_ACCOUNT
+      - --memory
+      - $_DEFAULT_MEMORY
+      - --concurrency
+      - $_DEFAULT_CONCURRENCY
+      - --max-instances
+      - $_DEFAULT_MAX_INSTANCES
+      - --timeout
+      - $_DEFAULT_TIMEOUT
+      - --cpu
+      - $_DEFAULT_CPU
+  # Reginateatern fetcher
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    id: 'Deploy Reginateatern fetcher'
+    waitFor: ['-']
+    dir: 'cloud_functions/events'
+    args:
+      - gcloud
+      - functions
+      - deploy
+      - fetch_reginateatern
+      - --gen2
+      - --region
+      - $_REGION
+      - --runtime
+      - $_PYTHON_VERSION
+      - --source
+      - .
+      # The function details
+      - --entry-point
+      - fetch_reginateatern
+      - --set-env-vars
+      - DB_INSTANCE_CONNECTION_NAME=$_DB_INSTANCE_CONNECTION_NAME
+      - --set-env-vars
+      - DB_NAME=$_DB_NAME
+      - --set-env-vars
+      - DB_USER=$_DB_USER
+      - --set-env-vars
+      - GCP_PROJECT=$PROJECT_ID
+      - --set-env-vars
+      - PUBSUB_TOPIC=$_PUBSUB_TOPIC
+      - --set-secrets
+      - DB_PASSWORD=events_db_password:1
+      - --set-secrets
+      - REGINATEATERN_USERNAME=reginateatern_username:1
+      - --set-secrets
+      - REGINATEATERN_PASSWORD=reginateatern_password:1
+      # Other settings
+      - --trigger-http
+      - --service-account
+      - $_CLOUD_FUNCTIONS_SERVICE_ACCOUNT
+      - --memory
+      - $_DEFAULT_MEMORY
+      - --concurrency
+      - $_DEFAULT_CONCURRENCY
+      - --max-instances
+      - $_DEFAULT_MAX_INSTANCES
+      - --timeout
+      - $_DEFAULT_TIMEOUT
+      - --cpu
+      - $_DEFAULT_CPU
+  # Scalateatern fetcher
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    id: 'Deploy Scalateatern fetcher'
+    waitFor: [ '-' ]
+    dir: 'cloud_functions/events'
+    args:
+      - gcloud
+      - functions
+      - deploy
+      - fetch_scalateatern
+      - --gen2
+      - --region
+      - $_REGION
+      - --runtime
+      - $_PYTHON_VERSION
+      - --source
+      - .
+      # The function details
+      - --entry-point
+      - fetch_scalateatern
+      - --set-env-vars
+      - DB_INSTANCE_CONNECTION_NAME=$_DB_INSTANCE_CONNECTION_NAME
+      - --set-env-vars
+      - DB_NAME=$_DB_NAME
+      - --set-env-vars
+      - DB_USER=$_DB_USER
+      - --set-env-vars
+      - GCP_PROJECT=$PROJECT_ID
+      - --set-env-vars
+      - PUBSUB_TOPIC=$_PUBSUB_TOPIC
+      - --set-secrets
+      - DB_PASSWORD=events_db_password:1
+      # Other settings
+      - --trigger-http
+      - --service-account
+      - $_CLOUD_FUNCTIONS_SERVICE_ACCOUNT
+      - --memory
+      - 512Mi
+      - --concurrency
+      - $_DEFAULT_CONCURRENCY
+      - --max-instances
+      - $_DEFAULT_MAX_INSTANCES
+      - --timeout
+      - $_DEFAULT_TIMEOUT
+      - --cpu
+      - $_DEFAULT_CPU
+  # StoraTeatern fetcher
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    id: 'Deploy Stora Teatern fetcher'
+    waitFor: [ '-' ]
+    dir: 'cloud_functions/events'
+    args:
+      - gcloud
+      - functions
+      - deploy
+      - fetch_storateatern
+      - --gen2
+      - --region
+      - $_REGION
+      - --runtime
+      - $_PYTHON_VERSION
+      - --source
+      - .
+      # The function details
+      - --entry-point
+      - fetch_storateatern
+      - --set-env-vars
+      - DB_INSTANCE_CONNECTION_NAME=$_DB_INSTANCE_CONNECTION_NAME
+      - --set-env-vars
+      - DB_NAME=$_DB_NAME
+      - --set-env-vars
+      - DB_USER=$_DB_USER
+      - --set-env-vars
+      - GCP_PROJECT=$PROJECT_ID
+      - --set-env-vars
+      - PUBSUB_TOPIC=$_PUBSUB_TOPIC
+      - --set-secrets
+      - DB_PASSWORD=events_db_password:1
+      # Other settings
+      - --trigger-http
+      - --service-account
+      - $_CLOUD_FUNCTIONS_SERVICE_ACCOUNT
+      - --memory
+      - 512Mi
+      - --concurrency
+      - $_DEFAULT_CONCURRENCY
+      - --max-instances
+      - $_DEFAULT_MAX_INSTANCES
+      - --timeout
+      - $_DEFAULT_TIMEOUT
+      - --cpu
+      - $_DEFAULT_CPU
+  # Svenska kyrkan fetcher
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    id: 'Deploy Svenska kyrkan fetcher'
+    waitFor: ['-']
+    dir: 'cloud_functions/events'
+    args:
+      - gcloud
+      - functions
+      - deploy
+      - fetch_svenskakyrkan
+      - --gen2
+      - --region
+      - $_REGION
+      - --runtime
+      - $_PYTHON_VERSION
+      - --source
+      - .
+      # The function details
+      - --entry-point
+      - fetch_svenskakyrkan
+      - --set-env-vars
+      - DB_INSTANCE_CONNECTION_NAME=$_DB_INSTANCE_CONNECTION_NAME
+      - --set-env-vars
+      - DB_NAME=$_DB_NAME
+      - --set-env-vars
+      - DB_USER=$_DB_USER
+      - --set-env-vars
+      - GCP_PROJECT=$PROJECT_ID
+      - --set-env-vars
+      - PUBSUB_TOPIC=$_PUBSUB_TOPIC
+      - --set-secrets
+      - DB_PASSWORD=events_db_password:1
+      - --set-secrets
+      - SVENSKAKYRKAN_OCP_API_KEY=svenskakyrkan_ocp_api_key:1
+      - --set-secrets
+      - SVENSKAKYRKAN_SVK_API_KEY=svenskakyrkan_svk_api_key:1
+      # Other settings
+      - --trigger-http
+      - --service-account
+      - $_CLOUD_FUNCTIONS_SERVICE_ACCOUNT
+      - --memory
+      - $_DEFAULT_MEMORY
+      - --concurrency
+      - $_DEFAULT_CONCURRENCY
+      - --max-instances
+      - $_DEFAULT_MAX_INSTANCES
+      - --timeout
+      - $_DEFAULT_TIMEOUT
+      - --cpu
+      - $_DEFAULT_CPU
+  # Ticketmaster fetcher
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    id: 'Deploy Ticketmaster fetcher'
+    waitFor: ['-']
+    dir: 'cloud_functions/events'
+    args:
+      - gcloud
+      - functions
+      - deploy
+      - fetch_ticketmaster
+      - --gen2
+      - --region
+      - $_REGION
+      - --runtime
+      - $_PYTHON_VERSION
+      - --source
+      - .
+      # The function details
+      - --entry-point
+      - fetch_ticketmaster
+      - --set-env-vars
+      - DB_INSTANCE_CONNECTION_NAME=$_DB_INSTANCE_CONNECTION_NAME
+      - --set-env-vars
+      - DB_NAME=$_DB_NAME
+      - --set-env-vars
+      - DB_USER=$_DB_USER
+      - --set-env-vars
+      - GCP_PROJECT=$PROJECT_ID
+      - --set-env-vars
+      - PUBSUB_TOPIC=$_PUBSUB_TOPIC
+      - --set-secrets
+      - DB_PASSWORD=events_db_password:1
+      - --set-secrets
+      - TICKETMASTER_API_KEY=ticketmaster_api_key:1
+      - --set-secrets
+      - TICKETMASTER_INTERNATIONAL_DISCOVERY_API_KEY=ticketmaster_international_disc_api_key:1
+      # Other settings
+      - --trigger-http
+      - --service-account
+      - $_CLOUD_FUNCTIONS_SERVICE_ACCOUNT
+      - --memory
+      - 512Mi
+      - --concurrency
+      - $_DEFAULT_CONCURRENCY
+      - --max-instances
+      - $_DEFAULT_MAX_INSTANCES
+      - --timeout
+      - $_DEFAULT_TIMEOUT
+      - --cpu
+      - $_DEFAULT_CPU
+  # Tickster fetcher
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    id: 'Deploy Tickster fetcher'
+    waitFor: ['-']
+    dir: 'cloud_functions/events'
+    args:
+      - gcloud
+      - functions
+      - deploy
+      - fetch_tickster
+      - --gen2
+      - --region
+      - $_REGION
+      - --runtime
+      - $_PYTHON_VERSION
+      - --source
+      - .
+      # The function details
+      - --entry-point
+      - fetch_tickster
+      - --set-env-vars
+      - DB_INSTANCE_CONNECTION_NAME=$_DB_INSTANCE_CONNECTION_NAME
+      - --set-env-vars
+      - DB_NAME=$_DB_NAME
+      - --set-env-vars
+      - DB_USER=$_DB_USER
+      - --set-env-vars
+      - GCP_PROJECT=$PROJECT_ID
+      - --set-env-vars
+      - PUBSUB_TOPIC=$_PUBSUB_TOPIC
+      - --set-secrets
+      - TICKSTER_API_KEY=tickster_api_key:1
+      - --set-secrets
+      - DB_PASSWORD=events_db_password:1
+      # Other settings
+      - --trigger-http
+      - --service-account
+      - $_CLOUD_FUNCTIONS_SERVICE_ACCOUNT
+      - --memory
+      - 512Mi
+      - --concurrency
+      - $_DEFAULT_CONCURRENCY
+      - --max-instances
+      - $_DEFAULT_MAX_INSTANCES
+      - --timeout
+      - $_DEFAULT_TIMEOUT
+      - --cpu
+      - $_DEFAULT_CPU
+  # Vara Konserthus fetcher
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    id: 'Deploy Vara Konserthus fetcher'
+    waitFor: ['-']
+    dir: 'cloud_functions/events'
+    args:
+      - gcloud
+      - functions
+      - deploy
+      - fetch_vara_konserthus
+      - --gen2
+      - --region
+      - $_REGION
+      - --runtime
+      - $_PYTHON_VERSION
+      - --source
+      - .
+      # The function details
+      - --entry-point
+      - fetch_vara_konserthus
+      - --set-env-vars
+      - DB_INSTANCE_CONNECTION_NAME=$_DB_INSTANCE_CONNECTION_NAME
+      - --set-env-vars
+      - DB_NAME=$_DB_NAME
+      - --set-env-vars
+      - DB_USER=$_DB_USER
+      - --set-env-vars
+      - GCP_PROJECT=$PROJECT_ID
+      - --set-env-vars
+      - PUBSUB_TOPIC=$_PUBSUB_TOPIC
+      - --set-secrets
+      - DB_PASSWORD=events_db_password:1
+      - --set-secrets
+      - VARA_KONSERTHUS_API_KEY=vara_konserthus_api_key:1
+      # Other settings
+      - --trigger-http
+      - --service-account
+      - $_CLOUD_FUNCTIONS_SERVICE_ACCOUNT
+      - --memory
+      - $_DEFAULT_MEMORY
+      - --concurrency
+      - $_DEFAULT_CONCURRENCY
+      - --max-instances
+      - $_DEFAULT_MAX_INSTANCES
+      - --timeout
+      - $_DEFAULT_TIMEOUT
+      - --cpu
+      - $_DEFAULT_CPU
+  # Glenn Miller Cafe fetcher
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    id: 'Deploy Glenn Miller Cafe fetcher'
+    waitFor: [ '-' ]
+    dir: 'cloud_functions/events'
+    args:
+      - gcloud
+      - functions
+      - deploy
+      - fetch_glennmillercafe
+      - --gen2
+      - --region
+      - $_REGION
+      - --runtime
+      - $_PYTHON_VERSION
+      - --source
+      - .
+      # The function details
+      - --entry-point
+      - fetch_glennmillercafe
+      - --set-env-vars
+      - DB_INSTANCE_CONNECTION_NAME=$_DB_INSTANCE_CONNECTION_NAME
+      - --set-env-vars
+      - DB_NAME=$_DB_NAME
+      - --set-env-vars
+      - DB_USER=$_DB_USER
+      - --set-env-vars
+      - GCP_PROJECT=$PROJECT_ID
+      - --set-env-vars
+      - PUBSUB_TOPIC=$_PUBSUB_TOPIC
+      - --set-secrets
+      - DB_PASSWORD=events_db_password:1
+      # Other settings
+      - --trigger-http
+      - --service-account
+      - $_CLOUD_FUNCTIONS_SERVICE_ACCOUNT
+      - --memory
+      - $_DEFAULT_MEMORY
+      - --concurrency
+      - $_DEFAULT_CONCURRENCY
+      - --max-instances
+      - $_DEFAULT_MAX_INSTANCES
+      - --timeout
+      - $_DEFAULT_TIMEOUT
+      - --cpu
+      - $_DEFAULT_CPU
+# Engel fetcher
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    id: 'Deploy Engel fetcher'
+    waitFor: [ '-' ]
+    dir: 'cloud_functions/events'
+    args:
+      - gcloud
+      - functions
+      - deploy
+      - fetch_engeln
+      - --gen2
+      - --region
+      - $_REGION
+      - --runtime
+      - $_PYTHON_VERSION
+      - --source
+      - .
+      # The function details
+      - --entry-point
+      - fetch_engeln
+      - --set-env-vars
+      - DB_INSTANCE_CONNECTION_NAME=$_DB_INSTANCE_CONNECTION_NAME
+      - --set-env-vars
+      - DB_NAME=$_DB_NAME
+      - --set-env-vars
+      - DB_USER=$_DB_USER
+      - --set-env-vars
+      - GCP_PROJECT=$PROJECT_ID
+      - --set-env-vars
+      - PUBSUB_TOPIC=$_PUBSUB_TOPIC
+      - --set-secrets
+      - DB_PASSWORD=events_db_password:1
+      # Other settings
+      - --trigger-http
+      - --service-account
+      - $_CLOUD_FUNCTIONS_SERVICE_ACCOUNT
+      - --memory
+      - $_DEFAULT_MEMORY
+      - --concurrency
+      - $_DEFAULT_CONCURRENCY
+      - --max-instances
+      - $_DEFAULT_MAX_INSTANCES
+      - --timeout
+      - $_DEFAULT_TIMEOUT
+      - --cpu
+      - $_DEFAULT_CPU
+# Bio Capitol fetcher
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    id: 'Deploy Bio Capitol fetcher'
+    waitFor: ['-']
+    dir: 'cloud_functions/events'
+    args:
+      - gcloud
+      - functions
+      - deploy
+      - fetch_biocapitol
+      - --gen2
+      - --region
+      - $_REGION
+      - --runtime
+      - $_PYTHON_VERSION
+      - --source
+      - .
+      # The function details
+      - --entry-point
+      - fetch_biocapitol
+      - --set-env-vars
+      - DB_INSTANCE_CONNECTION_NAME=$_DB_INSTANCE_CONNECTION_NAME
+      - --set-env-vars
+      - DB_NAME=$_DB_NAME
+      - --set-env-vars
+      - DB_USER=$_DB_USER
+      - --set-env-vars
+      - GCP_PROJECT=$PROJECT_ID
+      - --set-env-vars
+      - PUBSUB_TOPIC=$_PUBSUB_TOPIC
+      - --set-secrets
+      - DB_PASSWORD=events_db_password:1
+      - --set-secrets
+      - BIO_CAPITOL_KEY=bio_capitol_key:1
+      # Other settings
+      - --trigger-http
+      - --service-account
+      - $_CLOUD_FUNCTIONS_SERVICE_ACCOUNT
+      - --memory
+      - $_DEFAULT_MEMORY
+      - --concurrency
+      - $_DEFAULT_CONCURRENCY
+      - --max-instances
+      - $_DEFAULT_MAX_INSTANCES
+      - --timeout
+      - $_DEFAULT_TIMEOUT
+      - --cpu
+      - $_DEFAULT_CPU
+# Skansen fetcher
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    id: 'Deploy Skansen fetcher'
+    waitFor: [ '-' ]
+    dir: 'cloud_functions/events'
+    args:
+      - gcloud
+      - functions
+      - deploy
+      - fetch_skansen
+      - --gen2
+      - --region
+      - $_REGION
+      - --runtime
+      - $_PYTHON_VERSION
+      - --source
+      - .
+      # The function details
+      - --entry-point
+      - fetch_skansen
+      - --set-env-vars
+      - DB_INSTANCE_CONNECTION_NAME=$_DB_INSTANCE_CONNECTION_NAME
+      - --set-env-vars
+      - DB_NAME=$_DB_NAME
+      - --set-env-vars
+      - DB_USER=$_DB_USER
+      - --set-env-vars
+      - GCP_PROJECT=$PROJECT_ID
+      - --set-env-vars
+      - PUBSUB_TOPIC=$_PUBSUB_TOPIC
+      - --set-secrets
+      - DB_PASSWORD=events_db_password:1
+      # Other settings
+      - --trigger-http
+      - --service-account
+      - $_CLOUD_FUNCTIONS_SERVICE_ACCOUNT
+      - --memory
+      - $_DEFAULT_MEMORY
+      - --concurrency
+      - $_DEFAULT_CONCURRENCY
+      - --max-instances
+      - $_DEFAULT_MAX_INSTANCES
+      - --timeout
+      - $_DEFAULT_TIMEOUT
+      - --cpu
+      - $_DEFAULT_CPU
+# 21. Berwaldhallen fetcher
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    id: 'Deploy Berwaldhallen fetcher'
+    waitFor: [ '-' ]
+    dir: 'cloud_functions/events'
+    args:
+      - gcloud
+      - functions
+      - deploy
+      - fetch_berwaldhallen
+      - --gen2
+      - --region
+      - $_REGION
+      - --runtime
+      - $_PYTHON_VERSION
+      - --source
+      - .
+      - --entry-point
+      - fetch_berwaldhallen
+      - --set-env-vars
+      - DB_INSTANCE_CONNECTION_NAME=$_DB_INSTANCE_CONNECTION_NAME,DB_NAME=$_DB_NAME,DB_USER=$_DB_USER,GCP_PROJECT=$PROJECT_ID,PUBSUB_TOPIC=$_PUBSUB_TOPIC
+      - --set-secrets
+      - DB_PASSWORD=events_db_password:1
+      - --trigger-http
+      - --service-account
+      - $_CLOUD_FUNCTIONS_SERVICE_ACCOUNT
+      - --memory
+      - $_DEFAULT_MEMORY
+      - --timeout
+      - $_DEFAULT_TIMEOUT
+
+  # 22. Sofiero fetcher
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    id: 'Deploy Sofiero fetcher'
+    waitFor: ['-']
+    dir: 'cloud_functions/events'
+    args:
+      - gcloud
+      - functions
+      - deploy
+      - fetch_sofiero
+      - --gen2
+      - --region
+      - $_REGION
+      - --runtime
+      - $_PYTHON_VERSION
+      - --source
+      - .
+      - --entry-point
+      - fetch_sofiero
+      - --set-env-vars
+      - DB_INSTANCE_CONNECTION_NAME=$_DB_INSTANCE_CONNECTION_NAME,DB_NAME=$_DB_NAME,DB_USER=$_DB_USER,GCP_PROJECT=$PROJECT_ID,PUBSUB_TOPIC=$_PUBSUB_TOPIC
+      - --set-secrets
+      - DB_PASSWORD=events_db_password:1
+      - --trigger-http
+      - --service-account
+      - $_CLOUD_FUNCTIONS_SERVICE_ACCOUNT
+      - --memory
+      - $_DEFAULT_MEMORY
+
+  # 23. Helsingborg Arena fetcher
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    id: 'Deploy Helsingborg Arena fetcher'
+    waitFor: ['-']
+    dir: 'cloud_functions/events'
+    args:
+      - gcloud
+      - functions
+      - deploy
+      - fetch_helsingborg_arena
+      - --gen2
+      - --region
+      - $_REGION
+      - --runtime
+      - $_PYTHON_VERSION
+      - --source
+      - .
+      - --entry-point
+      - fetch_helsingborg_arena
+      - --set-env-vars
+      - DB_INSTANCE_CONNECTION_NAME=$_DB_INSTANCE_CONNECTION_NAME,DB_NAME=$_DB_NAME,DB_USER=$_DB_USER,GCP_PROJECT=$PROJECT_ID,PUBSUB_TOPIC=$_PUBSUB_TOPIC
+      - --set-secrets
+      - DB_PASSWORD=events_db_password:1
+      - --trigger-http
+      - --service-account
+      - $_CLOUD_FUNCTIONS_SERVICE_ACCOUNT
+      - --memory
+      - $_DEFAULT_MEMORY
+
+  # 24. Helsingborg Stadsteater fetcher
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    id: 'Deploy Helsingborg Stadsteater fetcher'
+    waitFor: ['-']
+    dir: 'cloud_functions/events'
+    args:
+      - gcloud
+      - functions
+      - deploy
+      - fetch_helsingborg_stadsteater
+      - --gen2
+      - --region
+      - $_REGION
+      - --runtime
+      - $_PYTHON_VERSION
+      - --source
+      - .
+      - --entry-point
+      - fetch_helsingborg_stadsteater
+      - --set-env-vars
+      - DB_INSTANCE_CONNECTION_NAME=$_DB_INSTANCE_CONNECTION_NAME,DB_NAME=$_DB_NAME,DB_USER=$_DB_USER,GCP_PROJECT=$PROJECT_ID,PUBSUB_TOPIC=$_PUBSUB_TOPIC
+      - --set-secrets
+      - DB_PASSWORD=events_db_password:1
+      - --trigger-http
+      - --service-account
+      - $_CLOUD_FUNCTIONS_SERVICE_ACCOUNT
+      - --memory
+      - $_DEFAULT_MEMORY
+
+  # 25. Helsingborg Konserthus fetcher
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    id: 'Deploy Helsingborg Konserthus fetcher'
+    waitFor: ['-']
+    dir: 'cloud_functions/events'
+    args:
+      - gcloud
+      - functions
+      - deploy
+      - fetch_helsingborg_konserthus
+      - --gen2
+      - --region
+      - $_REGION
+      - --runtime
+      - $_PYTHON_VERSION
+      - --source
+      - .
+      - --entry-point
+      - fetch_helsingborg_konserthus
+      - --set-env-vars
+      - DB_INSTANCE_CONNECTION_NAME=$_DB_INSTANCE_CONNECTION_NAME,DB_NAME=$_DB_NAME,DB_USER=$_DB_USER,GCP_PROJECT=$PROJECT_ID,PUBSUB_TOPIC=$_PUBSUB_TOPIC
+      - --set-secrets
+      - DB_PASSWORD=events_db_password:1
+      - --trigger-http
+      - --service-account
+      - $_CLOUD_FUNCTIONS_SERVICE_ACCOUNT
+      - --memory
+      - $_DEFAULT_MEMORY

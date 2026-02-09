@@ -1,0 +1,58 @@
+import itertools
+
+from raw_events.fetcher import EventFetcher, normalize_datetime
+from raw_events.folkoperan.api import get_events
+from raw_events.models import Event, SourceEvent, Venue, Coordinates
+
+
+class VaraKonserhusFetcher(EventFetcher):
+
+    def __init__(self, gcp_project: str, pubsub_topic: str, api_key: str) -> None:
+        super().__init__(gcp_project=gcp_project, pubsub_topic=pubsub_topic)
+        self.api_key = api_key
+
+    def get_events(self) -> list[Event]:
+        # Uses same API as Folkoperan, so can reuse method from that
+        events_data = get_events(self.api_key)
+        event_shows = [self.to_events(event_data) for event_data in events_data]
+        return list(itertools.chain(*event_shows))
+
+    @staticmethod
+    def to_events(event_data: dict) -> list[Event]:
+        result = []
+        for event in event_data.get("Dates"):
+            venue = Venue(
+                city="Vara",
+                address_text="Allégatan 49",
+                zipcode=53431,
+                name="Vara Konserthus",
+                coordinates=Coordinates(
+                    latitude=58.2656057, longitude=12.966647798148701
+                ),
+            )
+            source_data = SourceEvent(
+                name=event.get("Name"),
+                event_id=str(event.get("EventId")),
+                description=None,
+                start_datetime=normalize_datetime(event.get("StartDate")),
+                end_datetime=normalize_datetime(event.get("EndDate")),
+                venue=venue,
+                currency="SEK",
+                price_range=[
+                    float(event.get("MinPrice")),
+                    float(event.get("MaxPrice")),
+                ],
+                ticket_link=event.get("PurchaseUrls")[0].get("Link"),
+                status="Active",
+                sold_out=event.get("SoldOut"),
+                date_tickets_sale_start=normalize_datetime(
+                    event.get("OnlineSaleStart")
+                ),
+                organizer=event.get("Organisation"),
+                tags=None,
+                image=event_data.get("EventImagePath"),
+                artists=None,
+                explicit_category = None
+            )
+            result.append(Event(source="vara_konserthus", source_data=source_data))
+        return result

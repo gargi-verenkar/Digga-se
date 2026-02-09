@@ -1,0 +1,8 @@
+google-cloud-secret-manager
+cloud-sql-python-connector
+pg8000 # postgres python driver
+sqlalchemy
+cloudevents
+functions-framework==3.0.0
+flask>=1.0.2
+google-cloud-logging

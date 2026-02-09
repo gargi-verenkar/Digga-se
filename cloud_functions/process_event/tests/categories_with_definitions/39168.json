@@ -1,0 +1,25 @@
+{
+  "name": "SVART OCH VITT - Mordgåta på Teater Älva",
+  "image": "https://s1.ticketm.net/dam/e/e7c/e12b7165-2bec-4d97-9ea0-2ba80ae09e7c_SOURCE",
+  "venue": {
+    "city": "Göteborg",
+    "name": "Teater QH 11",
+    "zipcode": 41764,
+    "coordinates": {
+      "latitude": 57.70129,
+      "longitude": 11.91485
+    },
+    "address_text": "Maskingatan 11"
+  },
+  "status": "Active",
+  "currency": "SEK",
+  "description": "En alskad syster har gått bort. Tiden är i slutet av 40-talet och allt är svart och vitt. Släkten samlas för att ta ett sista farväl och tillsammans minnas den tid som flytt. men brodern får för sig att något är fel. Han bestämmer sig för att ta reda på sanningen, tyvärr är han inte tillräckligt smart. Är Du? Teatern startar redan när du anländer till ett mingel i foajén till den mysiga teatern. Efter en stund blir du injuden till ett gammalt församlingshem föreställningen utspelar sig under en minnesstund kvällen innan den älskade systern ska begravas. Studera hur kantorn interagerar med den misstänksamma brodern, lyssna noggrant till vad den äldre systern tycker om sin yngre syster och glöm inte anteckna vad mor Anna har i sin väska. Jämför dina iakttagelser med dina bordskamraters samtidigt som ni tar för er av den dignande buffén. Var därefter förberedda på att förhöra de misstänkta innan ni får rösta på vem ni tror är skyldig till mordet. Därefter är det dags för det överraskande slutet inne i teatern. Boka gärna övernattning på hotellet. Se länk på vår hemsida",
+  "event_id": "Z698xZq2Z16vvp_zAS",
+  "organizer": "Comedy Art Theatre Sweden AB",
+  "price_range": [
+    1009.0,
+    1009.0
+  ],
+  "ticket_link": "https://ticketmaster-se.tm7505.net/c/5433366/427737/7505?u=https%3A%2F%2Fwww.ticketmaster.se%2Fevent%2Fsvart-och-vitt-mordgata-pa-teater-alva-biljetter%2F1056678173",
+  "start_datetime": "2025-03-22T16:00:00Z"
+}

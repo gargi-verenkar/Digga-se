@@ -1,0 +1,12 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run events main",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/cloud_functions/events/main.py",
+            "console": "integratedTerminal"
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+{
+  "name": "Becoming Led Zeppelin",
+  "tags": [
+    "bio"
+  ],
+  "image": "https://static.tickster.com/e7/c4d38b6f6397ab195f4d7273478a310f533600",
+  "venue": {
+    "city": "Ljungby",
+    "name": "Salong Storan - Garvaren Bio",
+    "zipcode": 34160,
+    "coordinates": {
+      "latitude": 56.8324,
+      "longitude": 13.9341
+    },
+    "address_text": "Stationsgatan 2"
+  },
+  "currency": "SEK",
+  "event_id": "hd4t29dwruvfxpd",
+  "organizer": "Småländska biografer",
+  "description": "<p>Dokumentären täcker grundandet och de tidigare åren för rockgruppen Led Zeppelin fram till 1970 när de stod på toppen som världens största band. Detta är första gången en film är gjord med bandmedlemmarnas fulla medverkan.</p>\n",
+  "price_range": [
+    121.5,
+    135
+  ],
+  "ticket_link": "https://secure.tickster.com/hd4t29dwruvfxpd",
+  "end_datetime": "2025-02-09T19:31:00Z",
+  "start_datetime": "2025-02-09T17:30:00Z"
+}

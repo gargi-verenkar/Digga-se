@@ -1,0 +1,27 @@
+{
+  "source": "tickster",
+  "source_data": {
+    "name": "Måns Möller – Mitt perfekta liv 2025 (19.00)",
+    "tags": [
+      "Humor"
+    ],
+    "image": "https://static.tickster.com/a8/1d6f73d68640dfc9b8819516fbdf1831dcdc07",
+    "venue": {
+      "city": "Uppsala",
+      "name": "UKK - Stora salen",
+      "zipcode": 75331,
+      "address_text": "Vaksala torg 1"
+    },
+    "currency": "SEK",
+    "event_id": "tuk4rcj398pyd4p",
+    "organizer": "UKK",
+    "description": "<p><strong>Måns Möller</strong>, den mångsidiga och äventyrliga komikern, återvänder efterlängtat till rampljuset med den nya soloföreställningen ”Mitt Perfekta liv” – standup om autism, restskatt och världens längsta 40års-kris.</p>\n<p>Den nya föreställningen lovar att bjuda på en unik och humoristisk inblick i Måns värld, full av skratt och oväntade ögonblick.</p>\n<p>Måns har tidigare imponerat med sina fenomenala scenframträdanden i succéerna ”Sveriges Historia” och ”Världens Historia”, men han har lika mycket erövrat svenska hjärtan med sitt brinnande engagemang för Viggo Foundation, en organisation med målet att stötta barn med autisms rätt till rörelse och utveckling.</p>\n<p>– ”Jag hittade mitt perfekta liv genom Viggos devis – det är kul att vara glad. Mitt Perfekta Liv är en hyllning till den glädje och tillfredsställelse som kan hittas i det vardagliga.” säger Måns Möller.</p>\n",
+    "price_range": [
+      375,
+      495
+    ],
+    "ticket_link": "https://secure.tickster.com/tuk4rcj398pyd4p",
+    "end_datetime": "2025-04-12T18:40:00Z",
+    "start_datetime": "2025-04-12T17:00:00Z"
+  }
+}

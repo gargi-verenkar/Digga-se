@@ -1,0 +1,24 @@
+{
+  "source": "kulturbiljetter",
+  "source_data": {
+    "name": "Omätbara",
+    "image": "https://kulturbiljetter.se/storage/646193cf9e26fe463c12-ep.jpg",
+    "venue": {
+      "city": "Stockholm",
+      "name": "SKH cirkushall",
+      "address_text": "Brinellvägen 34"
+    },
+    "currency": "SEK",
+    "event_id": "34606",
+    "sold_out": true,
+    "organizer": "Stockholms Konstnärliga Högskola",
+    "description": "<p>Fourteen young artists from across Europe are now in their second year at SKH’s circus program. During their studies, they push their circus disciplines in new directions - tight wire, trapeze, Chinese pole, Cyr wheel, teeterboard, juggling, and aerial rope. <strong> Omätbara (Immeasurable)</strong> is the student´s ensemble project, aimed at combining their artistic visions into a collective creation performance, in the moment in between their first year of school and the graduation. </p><p>The students are guided by guest director Tilde Björfors, artist, artistic director, changemaker, playwright, and innovator. Fifteen years after her extensive research into circus languages and the ever-present duality of risk and possibility, she, together with these emerging artists, explores the contents of circus hearts in 2025.<br><br>The premiere Feb 11 is for invited only.<br>Children under 7 years old can come for free.</p><p>Fjorton unga artister från hela Europa går nu andra året på Stockholms Konstnärliga Högskolas (SKH) cirkusprogram. Under studietiden utvecklar de sina cirkusdiscipliner i nya riktningar, såsom lindans, trapets, kinesisk påle, cyr-hjul, språngbräda, jonglering och rep. <strong>Omätbara</strong> är studenternas ensemble-projekt, och går ut på att förena deras individuella konstnärliga visioner i en gemensam föreställning som görs i tiden mitt emellan det första skolåret och examen.</p><p>Studenterna guidas av gästregissören Tilde Björfors, konstnär, konstnärlig ledare, förändringsmakare, dramatiker och innovatör. Femton år efter Tildes omfattande forskning kring cirkusens språk och den ständigt närvarande dualiteten av risk och möjlighet, utforskar hon tillsammans med studenterna innehållet i cirkushjärtan 2025.<br><br>Premiären 11 feb är för endast inbjudna.<br>Barn under 7 år får komma gratis.<br> </p>",
+    "price_range": [
+      75.0,
+      150.0
+    ],
+    "ticket_link": "https://kulturbiljetter.se/varukorg/7541/34606/om%C3%A4tbara/",
+    "start_datetime": "2025-02-11T18:00:00Z",
+    "date_tickets_sale_start": "2024-11-26T08:00:00Z"
+  }
+}

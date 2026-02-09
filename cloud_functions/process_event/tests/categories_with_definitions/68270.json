@@ -1,0 +1,25 @@
+{
+  "name": "Livemusikquiz | Tema: Sossar!",
+  "image": "https://billetto.imgix.net/vzi1otq90s64i2xx7t6q85q50ife?w=1200&h=675&fit=crop&auto=compress%2Cformat&rect=49%2C0%2C1097%2C617&s=8021738950fd5e67b940308ceed63583",
+  "venue": {
+    "city": "Göteborg",
+    "name": "Skeppet GBG",
+    "zipcode": 41463,
+    "coordinates": {
+      "latitude": 57.6997,
+      "longitude": 11.9346
+    },
+    "address_text": "Amerikagatan 2"
+  },
+  "status": "Active",
+  "currency": "SEK",
+  "event_id": "1159627",
+  "organizer": "Skeppet GBG",
+  "description": "Kvällens tema: Sossar! Bandet kommer att spela otrolig musik av mer eller mindre sossiga artister. Och så några riktigt socialdemokratiska frågor på det! För musiken står som vanligt bandet Besättningen, under ledning av Mattias Axelsson. Quizet håller Matilda Mangold i.Dörrarna slås upp kl 19:00, quizet startar 20:00. Salongen öppen från 17:00 för före quiz-häng. Välkomna!\nInsläpp: 19:00Start: 20:00",
+  "price_range": [
+    90
+  ],
+  "ticket_link": "https://billetto.se/e/livemusikquiz-tema-sossar-biljetter-1159627?utm_campaign=websites&utm_content=SE+5578143&utm_medium=publishers&utm_source=billetto+advertising",
+  "end_datetime": "2025-02-20T22:00:00Z",
+  "start_datetime": "2025-02-20T19:00:00Z"
+}

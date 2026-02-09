@@ -1,0 +1,9 @@
+functions-framework
+google-cloud-pubsub
+google-cloud-logging
+google-cloud-secret-manager
+openai
+pydantic
+cloud-sql-python-connector
+sqlalchemy
+pg8000

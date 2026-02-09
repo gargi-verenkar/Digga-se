@@ -1,0 +1,17 @@
+{
+  "name": "Linje: Ulvön - Köpmanholmen",
+  "image": "https://branding.nortic.io/organizer/1363/event/64522?type=default&redirect=t",
+  "venue": {
+    "name": "M/F Ulvön"
+  },
+  "currency": "SEK",
+  "event_id": "260231",
+  "organizer": "Örnsköldsviks Hamn & Logistik AB",
+  "price_range": [
+    30.0,
+    105.0
+  ],
+  "ticket_link": "https://www.nortic.se/ticket/show/260231",
+  "end_datetime": "2025-07-20T18:15:00Z",
+  "start_datetime": "2025-07-20T18:15:00Z"
+}

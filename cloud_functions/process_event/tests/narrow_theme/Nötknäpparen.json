@@ -1,0 +1,24 @@
+{
+  "source": "tickster",
+  "source_data": {
+    "name": "Nötknäpparen",
+    "image": "https://static.tickster.com/1f/623785243d6da465bbe86f353f8d27885b80bf",
+    "venue": {
+      "city": "Nyköping",
+      "name": "Konsertsalen Culturum",
+      "zipcode": 61132,
+      "address_text": "Hospitalsgatan 4"
+    },
+    "currency": "SEK",
+    "event_id": "gl795tkr99jrwzp",
+    "organizer": "Nyköpings Arenor",
+    "description": "<p>Den världsberömda baletten Nötknäpparen framförs av ukrainska balettstjärnor och passar hela familjen!</p>\n<p>En vacker saga om unga Claras äventyr, Nötknäpparens prins, full av spännande berättelser, förvandlades av Pjotr Tjajkovskij till den populäraste klassiska baletten i världen 1892. Idag har baletten Nötknäpparen blivit en världsomspännande jultradition; denna föreställning sätts upp årligen på världens teater- och operascener.\nDansens universella språk är förståeligt utan översättning för någon publik - scenen kommer att presentera historien om en tjejs bräckliga dröm, kampen mellan gott och ont, där kärleken vinner.</p>\n<p>Dansande snöflingor, nötknäpparens prins, leksakssoldater och sockerplommonfen kommer till liv i denna magiska familjeklassiker. Upplev ett fantastiskt äventyr med en liten flicka som heter Clara, när hon går och lägger sig på julafton. Hon möter sin prins, konfronteras av en strid med råttor och möss som är större än livet och förs in i godisets ljuvliga land. Berättelsen är mycket mer än bara en julsaga. Det är en berättelse om att växa upp, vilket också återspeglas i dansen.</p>\n<p>Nu är det dags att fylla dig själv och det är precis platsen där du glömmer de trängande problemen och krånglet, fördjupar dig i den magiska världen, minns barndomsdrömmar och fyller din själ med inspiration, värme och nya drömmar.</p>\n<p>\"Nötkrackaren\"-balett är idealisk som den första balett som barn kommer att bekanta sig med. Dessutom, både för små åskådare och vuxna balettälskare, kommer baletten definitivt att erbjuda en känsla av beundran för skönhet och fylla alla med julstämning!</p>\n<p>Produktionen av klassisk koreografi av Marius Petipa kommer att framföras av ukrainska professionella balettdansörer - vinnare av internationella baletttävlingar, People's Artists of Ukraine, ukrainska solister och från februari 2022 europeiska teatrar.</p>\n<p>Turnén presenteras av den norska organisationen \"Kultur for Folket\" för att stödja ukrainsk klassisk balettkonst och ukrainska artister som inte har möjlighet att uppträda i sitt hemland.</p>\n<p>Föreställningens längd: 2tim, inkl paus</p>\n",
+    "price_range": [
+      540,
+      640
+    ],
+    "ticket_link": "https://secure.tickster.com/gl795tkr99jrwzp",
+    "end_datetime": "2024-12-13T20:00:00Z",
+    "start_datetime": "2024-12-13T18:00:00Z"
+  }
+}

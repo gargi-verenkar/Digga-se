@@ -1,0 +1,36 @@
+{
+  "source": "tickster",
+  "source_data": {
+    "name": "Flashdance - The Musical",
+    "tags": [
+      "Flashdance",
+      "Musical",
+      "The",
+      "Musikal",
+      "Varbergs",
+      "Teater",
+      "Maniac",
+      "What",
+      "Feeling",
+      "80-tal"
+    ],
+    "image": "https://static.tickster.com/f7/320f77bedcddf38c747461133aff2f2a8635e8",
+    "venue": {
+      "city": "Varberg",
+      "name": "Varbergs teater",
+      "zipcode": 43241,
+      "address_text": "Engelbrektsgatan 5"
+    },
+    "currency": "SEK",
+    "event_id": "uy16tw1wl11dv3x",
+    "organizer": "Ljudvågen",
+    "description": "<p>Upplev magin med Flashdance på Varbergs Teater i juni och juli 2025!</p>\n<p>Kliv in i en värld fylld av passion, dans och drömmar som går i uppfyllelse! I sommar välkomnar vi dig till Varbergs Teater för en sprakande uppsättning av den legendariska musikalen Flashdance – en berättelse som har fångat hjärtan världen över.</p>\n<p>Följ Alex Owens, en ung och orädd kvinna som jobbar som svetsare på dagen och drömmer om att bli professionell dansare på natten. Med stark vilja, mod och dansglädje bevisar hon att drömmar kan bli verklighet, oavsett hinder på vägen.</p>\n<p>Musikalen bjuder på energifyllda dansnummer och ikoniska hits som \"What a Feeling\", \"Maniac\" och \"I Love Rock 'n Roll\" – låtar som garanterat får dig att stampa takten i stolen. Den intensiva koreografin och fantastiska musiken gör detta till en upplevelse du sent kommer att glömma.</p>\n<p>Samla familj och vänner och njut av en oförglömlig kväll på Varbergs Teater, där den tidlösa berättelsen om kärlek, ambition och styrka tar plats på scen.</p>\n<p>Missar du detta spektakel kommer du ångra dig – känn pulsen, lev drömmen och dansa dig genom kvällen med Flashdance!</p>\n<p>Vad väntar du på? Let’s dance!</p>\n<p>FLASHDANCE – THE MUSICAL</p>\n<p>Music & Lyrics by: Robbie Roth\nBook by: Tom Hedley\nBook & Lyrics by: Robert Cary\nFörlag: ATRs Förlag, Västerås/ Nordiska ApS, Köpenhamn</p>\n<p>Musikalen ges på engelska.\nI samarbete med ABF</p>\n",
+    "price_range": [
+      300,
+      450
+    ],
+    "ticket_link": "https://secure.tickster.com/uy16tw1wl11dv3x",
+    "end_datetime": "2025-07-10T19:30:00Z",
+    "start_datetime": "2025-07-10T17:00:00Z"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "source": "nortic",
+  "source_data": {
+    "name": "Julkonsert",
+    "image": "https://branding.nortic.io/organizer/3073/event/61205?type=default&redirect=t",
+    "venue": {
+      "city": "Stockholm",
+      "name": "S:t Matteus Kyrka",
+      "coordinates": {
+        "latitude": 18.068580627441406,
+        "longitude": 59.329322814941406
+      }
+    },
+    "currency": "SEK",
+    "event_id": "247051",
+    "organizer": "S:t Matteus församling",
+    "description": "<p>Medverkande:<br>S:t Matteus Barnkör<br>Diskantkören<br>Vox Matthaei<br>S:t Matteus kammarkör<br>S:t Matteus Symfoniorkester<br>Arvid Eriksson, baryton<br>Espen Myklebust Olsen, dirigent</p>\r\n<p>Lördag 14 dec 14.30: Barn under 7 år fritt inträde med kostnadsfri biljett. Övriga konserter åldersgräns 7 år. </p>",
+    "price_range": [
+      75.0,
+      200.0
+    ],
+    "ticket_link": "https://www.nortic.se/ticket/show/247051",
+    "end_datetime": "2024-12-15T16:00:00Z",
+    "start_datetime": "2024-12-15T16:00:00Z",
+    "date_tickets_sale_start": "2024-11-04T07:00:00Z"
+  }
+}

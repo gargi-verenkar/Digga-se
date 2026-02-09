@@ -1,0 +1,30 @@
+{
+  "source": "tickster",
+  "source_data": {
+    "name": "Out",
+    "tags": [
+      "dans",
+      "akrobatik",
+      "humor",
+      "cirkus"
+    ],
+    "image": "https://static.tickster.com/da/ed068a136d6f2f2243ac937244502196e913af",
+    "venue": {
+      "city": "Tranås",
+      "name": "Hålavedsgymnasiet Tranås",
+      "zipcode": 57335,
+      "address_text": "Gillesgatan 4 573 35 Tranås"
+    },
+    "currency": "SEK",
+    "event_id": "l1pukefmyw824fw",
+    "organizer": "Tranås TF",
+    "description": "<p>Ett överraskande, humoristiskt och poetiskt cirkusuniversum!\nÖverraskande, fantasifullt och poetiskt. Följ med till ett vackert och tillitsfullt cirkusuniversum för hela familjen. Här är skörhet och lekfullhet centralt. Här samsas hinkar, humor, fara, drömmar och nervpirrande luftakrobatik.</p>\n<p>Hinkar. Hur ofta tänker du på hinkar? Trapetskonstnärerna Morgane Stäheli och Sébastien Klink använder sig av en liten hink varje dag. Där förvaras det puder som de behöver för att få ordentligt fäste när de utför sin hisnande cirkusdisciplin; partrapets.</p>\n<p>I O U T får artisterna oss att upptäcka hinkars oändliga möjligheter. På marken och i luften; med olika former, storlekar och material. Det blir dessutom dans i slowmotion, discobollar i fritt fall och finurligt unika lösningar på absurda problem och situationer. När de finner ett sätt att kommunicera är det dags att flyga på trapetsen. De behöver förhålla sig till faktorer som risk, tillit, balans och höjd. Energin färdas, omvandlas och delas.</p>\n<p>”I O U T skapar vi en poetisk och intim men ändå absurd upplevelse. Vi leker med mjukhet och skörhet samtidigt som överraskningar och risktagande aldrig är långt borta”, säger Morgane och Sébastien.</p>\n",
+    "price_range": [
+      50,
+      160
+    ],
+    "ticket_link": "https://secure.tickster.com/l1pukefmyw824fw",
+    "end_datetime": "2025-03-02T19:00:00Z",
+    "start_datetime": "2025-03-02T17:00:00Z"
+  }
+}

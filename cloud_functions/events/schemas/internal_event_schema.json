@@ -1,0 +1,198 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "source": {
+      "type": "string",
+      "enum": [
+        "axs",
+        "berwaldhallen",
+        "billetto",
+        "biocapitol",
+        "engeln",
+        "eventim",
+        "folkoperan",
+        "glennmillercafe",
+        "gronalund",
+        "kulturbiljetter",
+        "kulturhusetstadsteatern",
+        "nortic",
+        "ravinen",
+        "reginateatern",
+        "scalateatern",
+        "skansen",
+        "storateatern",
+        "svenskakyrkan",
+        "ticketmaster",
+        "tickster",
+        "vara_konserthus",
+        "sofiero",
+        "helsingborg_stadsteater",
+        "helsingborg_arena",
+        "helsingborg_konserthus"
+      ]
+    },
+    "source_data": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "event_id": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "start_datetime": {
+          "description": "ISO8601, example: 2024-10-17T17:00:00Z",
+          "type": "string",
+          "format": "date-time",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$"
+        },
+        "end_datetime": {
+          "description": "ISO8601, example: 2024-10-17T17:00:00Z",
+          "type": "string",
+          "format": "date-time",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$"
+        },
+        "venue": {
+          "type": "object",
+          "properties": {
+            "city": {
+              "type": "string"
+            },
+            "address_text": {
+              "type": "string"
+            },
+            "zipcode": {
+              "type": "number",
+              "minimum": 10000,
+              "maximum": 99999
+            },
+            "name": {
+              "type": "string"
+            },
+            "coordinates": {
+              "type": "object",
+              "properties": {
+                "latitude": {
+                  "type": "number"
+                },
+                "longitude": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "latitude",
+                "longitude"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "name"
+          ],
+          "additionalProperties": false
+        },
+        "currency": {
+          "type": "string",
+          "enum": [
+            "SEK"
+          ]
+        },
+        "price_range": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 0,
+          "maxItems": 2,
+          "minimum": 0
+        },
+        "ticket_link": {
+          "type": "string",
+          "format": "uri"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "Active",
+            "Cancelled",
+            "Deleted"
+          ]
+        },
+        "sold_out": {
+          "type": "boolean"
+        },
+        "date_tickets_sale_start": {
+          "description": "ISO8601, example: 2024-10-17T00:00:00Z",
+          "type": "string",
+          "format": "date-time",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$"
+        },
+        "organizer": {
+          "type": "string"
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "image": {
+          "type": "string",
+          "format": "uri"
+        },
+        "artists": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "explicit_category": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "event_id",
+        "start_datetime",
+        "venue"
+      ],
+      "additionalProperties": false
+    },
+    "category_id": {
+      "type": "number"
+    },
+    "theme_ids": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "genre_ids": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "subgenres": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "venue_id": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "source",
+    "source_data"
+  ],
+  "additionalProperties": false
+}

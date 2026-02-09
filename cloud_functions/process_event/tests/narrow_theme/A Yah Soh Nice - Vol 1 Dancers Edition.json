@@ -1,0 +1,23 @@
+{
+  "source": "tickster",
+  "source_data": {
+    "name": "A Yah Soh Nice - Vol 1 Dancers Edition",
+    "image": "https://static.tickster.com/1e/92ab987ec8ad591e9b9db79473f8a41c7582ad",
+    "venue": {
+      "city": "Stockholm",
+      "name": "Mäster Samuelsgatan 18",
+      "zipcode": 11143,
+      "address_text": "Mäster Samuelsgatan 18"
+    },
+    "currency": "SEK",
+    "event_id": "jy6yvfyxnv7rj0b",
+    "organizer": "FJK",
+    "description": "<p>A Yah Soh Nice är tillbaka!!\nDen 14 december tar vi över Holken och förvandlar till ett Jamaicanskt street party! Ingen mindre än självaste danskungen av daggering Shelly Belly är på plats tillsammans med Esco, Daniiboo och Sanjay!\nOch såklart Stockholms hetaste DJs inom Dancehall: DJ Patuu, Stella och Tev!!</p>\n",
+    "price_range": [
+      160
+    ],
+    "ticket_link": "https://secure.tickster.com/jy6yvfyxnv7rj0b",
+    "end_datetime": "2024-12-15T02:00:00Z",
+    "start_datetime": "2024-12-14T21:00:00Z"
+  }
+}

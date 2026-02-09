@@ -1,0 +1,50 @@
+{
+  "$schema": "events_schema.json",
+  "data": {
+    "event": {
+      "name": "Rock Night",
+      "id": "324323",
+      "category_id": "3",
+      "theme_ids": [
+        "1",
+        "2"
+      ],
+      "genre_ids": [
+        "2",
+        "3"
+      ],
+      "subgenres": [
+        "K-pop"
+      ],
+      "venueId": "12345",
+      "startDateTime": "2024-10-17T17:00:00Z",
+      "endDateTime": "2024-10-17T23:00:00Z",
+      "description": "An exciting night of rock music with multiple bands performing live.",
+      "ticketLink": "https://example.com/tickets/rock-night",
+      "image": "https://example.com/images/rock-night.jpg",
+      "artists": [
+        "Bruno Mars"
+      ],
+      "organizer": "Rock Events Co.",
+      "soldOut": false,
+      "dateTicketsSaleStart": "2024-06-01T00:00:00Z",
+      "currency": "SEK",
+      "price_range": [
+        250,
+        300
+      ]
+    },
+    "_metadata": {
+      "venue": {
+        "id": "12345",
+        "name": "M A Z E",
+        "search_name": "maze",
+        "address": "Old street 1",
+        "zipcode": 14455,
+        "city": "Stockholm",
+        "country_code": "SE",
+        "type": 1
+      }
+    }
+  }
+}

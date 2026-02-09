@@ -1,0 +1,193 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Event schema",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "event": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "category_id": {
+              "description": "Concert, Musical, Theatre, Show, Standup, Dance, Opera, Club",
+              "type": ["string", "null"]
+            },
+            "theme_ids": {
+              "description": "Chosen from a fixed list such as: Explicitly Comedy, For children and families, Explicitly Christmas, Traditional circus arts",
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 0,
+              "maxItems": 2
+            },
+            "genre_ids": {
+              "description": "Chosen from a fixed list of main genres such as Pop, Rock, Electronic, Blues...",
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 0,
+              "maxItems": 2
+            },
+            "subgenres": {
+              "description": "A non fixed list of sub genres; so more like tags",
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 0,
+              "maxItems": 2
+            },
+            "startDateTime": {
+              "description": "ISO8601, example: 2024-10-17T17:00:00Z",
+              "type": "string",
+              "format": "date-time",
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$"
+            },
+            "endDateTime": {
+              "description": "ISO8601, example: 2024-10-17T17:00:00Z",
+              "type": "string",
+              "format": "date-time",
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$"
+            },
+            "name": {
+              "type": "string"
+            },
+            "description": {
+              "description": "A description of the event",
+              "type": "string"
+            },
+            "ticketLink": {
+              "type": "string",
+              "format": "uri"
+            },
+            "price_range": {
+              "description": "The highest and lowest price seen for different tickets for this event",
+              "type": "array",
+              "items": {
+                "type": "number"
+              },
+              "minItems": 0,
+              "maxItems": 2,
+              "minimum": 0
+            },
+            "currency": {
+              "type": "string",
+              "pattern": "^[A-Z]{3}$",
+              "description": "ISO4217 currency of the price. Example: SEK"
+            },
+            "venueId": {
+              "description": "venue id, see _metadata/venue",
+              "type": "string"
+            },
+            "image": {
+              "type": "string",
+              "format": "uri"
+            },
+            "artists": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "organizer": {
+              "type": "string"
+            },
+            "soldOut": {
+              "description": "For some events there's info on if sold out or not.",
+              "type": "boolean"
+            },
+            "dateTicketsSaleStart": {
+              "description": "ISO8601, example: 2024-10-17T00:00:00Z",
+              "type": "string",
+              "format": "date-time",
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$"
+            }
+          },
+          "required": [
+            "id",
+            "name",
+            "startDateTime",
+            "category_id"
+          ],
+          "additionalProperties": false
+        },
+        "_metadata": {
+          "type": "object",
+          "properties": {
+            "venue": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "search_name": {
+                  "type": "string"
+                },
+                "address": {
+                  "type": "string"
+                },
+                "zipcode": {
+                  "type": "integer"
+                },
+                "city": {
+                  "type": "string"
+                },
+                "country_code": {
+                  "type": "string",
+                  "pattern": "^[A-Z]{2}$"
+                },
+                "geolocation": {
+                  "type": "object",
+                  "properties": {
+                    "latitude": {
+                      "type": "number"
+                    },
+                    "longitude": {
+                      "type": "number"
+                    }
+                  },
+                  "required": ["latitude", "longitude"],
+                  "additionalProperties": false
+                },
+                "type": {
+                  "type": "number"
+                }
+              },
+              "required": ["id", "name", "zipcode", "city", "country_code"],
+              "additionalProperties": false
+
+            },
+            "venue_hint": {
+              "description": "A string giving a hint as to which venue/address could not be matched against a known venue",
+              "type": "string"
+            }
+          },
+          "oneOf": [
+            { "required": ["venue"] },
+            { "required": ["venue_hint"] }
+          ]
+        }
+      },
+      "required": ["event", "_metadata"],
+      "additionalProperties": false
+    }
+
+
+
+  },
+  "required": ["data"],
+  "additionalProperties": false
+
+}

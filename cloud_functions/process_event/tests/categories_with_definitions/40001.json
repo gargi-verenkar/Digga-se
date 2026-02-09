@@ -1,0 +1,28 @@
+{
+  "name": "OnsdagsNöjet",
+  "tags": [
+    "XpressOnsdag"
+  ],
+  "image": "https://static.tickster.com/60/bb43af92243a895773ce3749a78d33d8777fd1",
+  "venue": {
+    "city": "Stockholm",
+    "name": "Solvalla",
+    "zipcode": 16864,
+    "coordinates": {
+      "latitude": 59.3656,
+      "longitude": 17.9387
+    },
+    "address_text": "Travbanevägen"
+  },
+  "currency": "SEK",
+  "event_id": "v4g8z2m0n18jc56",
+  "organizer": "Solvalla",
+  "description": "<p>Välkommen till en spännande onsdagkväll på Solvalla. Huvudspelet från ATG är V86®.</p>\n",
+  "price_range": [
+    50,
+    475
+  ],
+  "ticket_link": "https://secure.tickster.com/v4g8z2m0n18jc56",
+  "end_datetime": "2025-02-19T21:00:00Z",
+  "start_datetime": "2025-02-19T17:15:00Z"
+}

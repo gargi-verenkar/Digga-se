@@ -1,0 +1,143 @@
+swagger: "2.0"
+info:
+  title: "Digga Events Backend API"
+  version: "1.0.0"
+host: "events-backend-api-gateway-6vdkul13.ew.gateway.dev"
+schemes:
+  - "https"
+securityDefinitions:
+  Bearer:
+    type: "apiKey"
+    name: "Authorization"
+    in: "header"
+    description: "Enter 'Bearer' [space] and then your token."
+security:
+  - Bearer: []
+
+paths:
+  /venues:
+    post:
+      summary: "Create a new venue"
+      operationId: "createVenue"
+      consumes:
+        - "application/json"
+      produces:
+        - "application/json"
+      parameters:
+        - in: "body"
+          name: "body"
+          description: "Venue object that needs to be added"
+          required: true
+          schema:
+            $ref: "#/definitions/Venue"
+      responses:
+        201:
+          description: "Venue created successfully"
+          schema:
+            type: "object"
+            properties:
+              id:
+                type: "integer"
+              status:
+                type: "string"
+          examples:
+            application/json: |
+              {
+                "id": 2175,
+                "status": "success"
+              }
+        400:
+          description: "Missing required fields"
+        401:
+          description: "Unauthorized"
+        500:
+          description: "Internal server error"
+      x-google-backend:
+        address: "https://europe-north1-digga-se.cloudfunctions.net/create_venue"
+        path_translation: APPEND_PATH_TO_ADDRESS
+        protocol: "http/1.1"
+
+  /venues/{id}:
+    patch:
+      summary: "Partially update an existing venue"
+      operationId: "updateVenue"
+      consumes:
+        - "application/json"
+      produces:
+        - "application/json"
+      parameters:
+        - name: "id"
+          in: "path"
+          required: true
+          type: "string"
+        - in: "body"
+          name: "body"
+          description: "Partial Venue object that needs to be updated"
+          required: true
+          schema:
+            $ref: "#/definitions/PartialVenueUpdate"
+      responses:
+        200:
+          description: "Venue updated successfully"
+          schema:
+            type: "object"
+            properties:
+              id:
+                type: "integer"
+              status:
+                type: "string"
+          examples:
+            application/json: |
+              {
+                "id": 2175,
+                "status": "success"
+              }
+        400:
+          description: "Invalid request or missing required fields"
+        401:
+          description: "Unauthorized"
+        404:
+          description: "Venue not found"
+        500:
+          description: "Internal server error"
+      x-google-backend:
+        address: "https://europe-north1-digga-se.cloudfunctions.net/update_venue"
+        path_translation: APPEND_PATH_TO_ADDRESS
+        protocol: "http/1.1"
+
+definitions:
+  Venue:
+    type: "object"
+    properties:
+      name:
+        type: "string"
+      search_name:
+        type: "string"
+      address:
+        type: "string"
+      zipcode:
+        type: "integer"
+      city:
+        type: "string"
+      country_code:
+        type: "string"
+      type:
+        type: "integer"
+
+  PartialVenueUpdate:
+    type: "object"
+    properties:
+      name:
+        type: "string"
+      search_name:
+        type: "string"
+      address:
+        type: "string"
+      zipcode:
+        type: "integer"
+      city:
+        type: "string"
+      country_code:
+        type: "string"
+      type:
+        type: "integer"

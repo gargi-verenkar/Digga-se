@@ -1,0 +1,27 @@
+{
+  "source": "tickster",
+  "source_data": {
+    "name": "Snögubben",
+    "image": "https://static.tickster.com/e0/517c03a81b7f5482a38540adac1c67d6b62b12",
+    "venue": {
+      "city": "Stockholm",
+      "name": "Orionteatern",
+      "zipcode": 11642,
+      "coordinates": {
+        "latitude": 59.3082,
+        "longitude": 18.0902
+      },
+      "address_text": "Katarina Bangata 77"
+    },
+    "currency": "SEK",
+    "event_id": "nna9cf66gjh4ng4",
+    "organizer": "Orionteatern",
+    "description": "<ul>\n<li>Dörrar öppnar 30 min innan föreställningen börjar.</li>\n<li>Rekommenderas från 3–7 år.</li>\n<li>Speltid 40 min, utan paus.</li>\n<li>Onumrerad sittplats. Tillgänglighetsplats bokas via <a href=\"mailto:snogubben@lillao.se\" rel=\"nofollow\">snogubben@lillao.se</a></li>\n<li>Ingen återbetalning, byte till annan föreställning av Snögubben i mån av plats. Bytet måste ske senast 48 h innan föreställningen börjar.</li>\n</ul>\n<p>En gnistrande vintersaga om fantasins kraft, om de vuxnas alla tråkiga måsten och om lekens magiska äventyr. Skådespelarnas fysiska berättande blandas med färgrikt skuggspel och nyskriven musik i en visuell barnföreställning.</p>\n<p>Läs mer på <a href=\"https://orionteatern.se/scen/snogubben\" rel=\"nofollow\">orionteatern.se</a>.</p>\n",
+    "price_range": [
+      150
+    ],
+    "ticket_link": "https://secure.tickster.com/nna9cf66gjh4ng4",
+    "end_datetime": "2024-12-12T17:30:00Z",
+    "start_datetime": "2024-12-12T16:00:00Z"
+  }
+}

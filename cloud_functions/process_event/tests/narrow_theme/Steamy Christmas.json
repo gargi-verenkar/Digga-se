@@ -1,0 +1,28 @@
+{
+  "source": "nortic",
+  "source_data": {
+    "name": "Steamy Christmas",
+    "image": "https://branding.nortic.io/organizer/2418/event/56784?type=default&redirect=t",
+    "venue": {
+      "city": "Västerås",
+      "name": "Steam Hotel",
+      "zipcode": 72131,
+      "coordinates": {
+        "latitude": 16.56916,
+        "longitude": 59.60743
+      },
+      "address_text": "Ångkraftsvägen 14"
+    },
+    "currency": "SEK",
+    "event_id": "228988",
+    "organizer": "Hotellet vid Sjön AB",
+    "description": "<p>Årets absolut populäraste event är tillbaka, Steamy Christmas 2024!</p>\r\n<p>I år blir det kanske mer rock än någonsin då kvällen vaggas in i en riktigt Queen-tribute. I vanliga ordning har Executive Chef – Niclas Wahlström komponerat ihop en magisk julmeny som kommer i två stycken serveringar och avslutas med ett helt klart överdrivet magiskt CANDYLAND!</p>\r\n<p> </p>\r\n<p>Det blir musik framfört av fyra musiksäkra sångerskor samt ett förträffligt liveband, värdiga att axla manteln som frontpersoner för den legendariska Freddie Mercury. Ingen enkel uppgift men oj så bra dom gör det! Queenshowen hyllas till skyarna av publiken och får högsta betyg i media! Queens spelade för fulla hus i höstas på Kajskjul 8 i Göteborg och succén gör nu att tjejerna beger sig ut på en stor Sverigeturné med självklart stopp på Steamy Christmas! <br><br></p>\r\n<p>I priset ingår entré, mat och show.<br><br>Dryckespaket silver innehåller fördrink och 2 glas vin eller öl till maten. <br>Dryckespaket guld ingår även 5cl avec eller snaps. <br><br></p>\r\n<p><em>*Alla shower har en 18 års åldersgräns. Placering sker vid långbord vilket gör att du kan få dela med andra likasinnade julfestprissar! Inga biljetter återbetalas.</em></p>",
+    "price_range": [
+      1101.0,
+      1677.0
+    ],
+    "ticket_link": "https://www.nortic.se/ticket/show/228988",
+    "end_datetime": "2024-12-09T11:00:00Z",
+    "start_datetime": "2024-12-14T16:15:00Z"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "source": "tickster",
+  "source_data": {
+    "name": "Patrik Larsson & Viktor Wu",
+    "tags": [
+      "standup",
+      "örkelljunga",
+      "forumörkelljunga",
+      "forum",
+      "forumarena",
+      "komedi",
+      "humor",
+      "show"
+    ],
+    "image": "https://static.tickster.com/6a/4cd4670b0d56dbf2e4392b9343ea4b8c78b22b",
+    "venue": {
+      "city": "ÖRKELLJUNGA",
+      "name": "FORUM Örkelljunga",
+      "zipcode": 28634,
+      "coordinates": {
+        "latitude": 56.2801,
+        "longitude": 13.268
+      },
+      "address_text": "Kungsvägen 22"
+    },
+    "currency": "SEK",
+    "event_id": "98rf4bf9uvdc67z",
+    "organizer": "Örkelljunga kommun",
+    "description": "<p>En kväll full av skratt med Patrik Larsson och Victor Wu!</p>\n<p>Är du redo för en kväll fylld med skratt och glädje? Denna gång slår vi på stort och bjuder in inte bara en, utan två av Sveriges mest briljanta komiker – Patrik Larsson och Victor Wu!</p>\n<p>Patrik Larsson, känd från TV och ståuppscener runt om i landet, är mästaren på träffsäkra iakttagelser och skämt som får hela publiken att kikna av skratt. Med sin unika humor och knivskarpa leveranser är Patrik en av de mest uppskattade komikerna på den svenska humorscenen.</p>\n<p>Victor Wu är ett stigande stjärnskott som redan har etablerat sig som en publikfavorit med sin smarta, rappa och charmiga humor. Med sina unika perspektiv och oförutsägbara skämt kommer Victor garanterat hålla dig på tårna hela kvällen.</p>\n<p>Detta är en standup-kväll du absolut inte vill missa! Ta med dina vänner, kollegor eller familj och ladda för en kväll där magmusklerna kommer få jobba ordentligt.</p>\n",
+    "price_range": [
+      200,
+      275
+    ],
+    "ticket_link": "https://secure.tickster.com/98rf4bf9uvdc67z",
+    "end_datetime": "2024-11-29T19:00:00Z",
+    "start_datetime": "2024-11-29T18:00:00Z"
+  }
+}

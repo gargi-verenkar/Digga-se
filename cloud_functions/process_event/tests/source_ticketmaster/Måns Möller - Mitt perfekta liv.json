@@ -1,0 +1,26 @@
+{
+  "source": "ticketmaster",
+  "source_data": {
+    "name": "Måns Möller - Mitt perfekta liv",
+    "image": "https://s1.ticketm.net/dam/a/011/00db68c4-0f46-40b1-a237-a3d23a5e2011_SOURCE",
+    "venue": {
+      "name": "Jarl Kulle Scenen",
+      "zipcode": 26231,
+      "coordinates": {
+        "latitude": 56.24529,
+        "longitude": 12.86829
+      },
+      "address_text": "Ängelholm, Skolgatan 8"
+    },
+    "status": "Active",
+    "currency": "SEK",
+    "event_id": "Z698xZq2Z17__7A",
+    "organizer": "Lifeline Entertainment AB",
+    "price_range": [
+      375.0,
+      525.0
+    ],
+    "ticket_link": "https://ticketmaster-se.tm7505.net/c/5433366/427737/7505?u=https%3A%2F%2Fwww.ticketmaster.se%2Fevent%2Fmans-moller-mitt-perfekta-liv-biljetter%2F659105",
+    "start_datetime": "2024-10-03T17:00:00Z"
+  }
+}

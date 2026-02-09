@@ -1,0 +1,27 @@
+{
+  "source": "tickster",
+  "source_data": {
+    "name": "Girls Night Out på Barbros",
+    "image": "https://static.tickster.com/4e/1473be0f0b1411814099aa44a9d84336ce6a11",
+    "venue": {
+      "city": "Bollnäs",
+      "name": "Barbros kök & bar",
+      "zipcode": 82141,
+      "coordinates": {
+        "latitude": 61.3471,
+        "longitude": 16.3968
+      },
+      "address_text": "Östra stationsgatan 17"
+    },
+    "currency": "SEK",
+    "event_id": "24rp3nkvdxxb16e",
+    "organizer": "Barbros kök & bar",
+    "description": "<p>Ta med tjejgänget, mamma eller syrran på en “Girls Night Out” hos oss på Barbros! Massor av lokala utställare, kläder, skor, smink, hår, skincare, selfcare, modevisning mm..\nEn kväll du inte vill missa!</p>\n<p>I priset ingår 1 glas cava eller 1 glas alkoholfritt bubbel vid ankomst.</p>\n<p>Evenemanget har ingen åldersgräns. 18+ efter 22.00</p>\n",
+    "price_range": [
+      100
+    ],
+    "ticket_link": "https://secure.tickster.com/24rp3nkvdxxb16e",
+    "end_datetime": "2025-02-07T21:00:00Z",
+    "start_datetime": "2025-02-07T17:00:00Z"
+  }
+}

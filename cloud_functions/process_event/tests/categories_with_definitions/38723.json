@@ -1,0 +1,27 @@
+{
+  "name": "Wicked (Sv. Tal)",
+  "tags": [
+    "bio"
+  ],
+  "image": "https://static.tickster.com/b0/ba6d5b46bab33d971b3986701f4ce9cc73e6c4",
+  "venue": {
+    "city": "Markaryd",
+    "name": "Markaryds Biograf",
+    "zipcode": 28531,
+    "coordinates": {
+      "latitude": 56.4588,
+      "longitude": 13.5949
+    },
+    "address_text": "Kungsgatan 1"
+  },
+  "currency": "SEK",
+  "event_id": "y6br6c9jnaz1uyb",
+  "organizer": "Lagan Biografer",
+  "description": "<p>Efter två årtionden som en av de mest älskade och långlivade musikalerna på teaterscenen, gör Wicked äntligen sin hett efterlängtade resa till vita duken, i ett spektakulärt, generations-definierande filmiskt event.</p>\n<p>I Wicked, historien om häxorna i Oz, ser vi den Emmy-, Grammy- och Tony-belönade Cynthia Erivo (Harriet, Broadways The Color Purple) som Elphaba, en ung kvinna, missförstådd på grund av sin ovanliga gröna hud, som ännu inte upptäckt kraften inom sig, och Grammy-belönade globala superstjärnan Ariana Grande som Glinda, en populär ung kvinna, förgylld av privilegium och ambitioner, som ännu inte upptäckt sitt sanna hjärta.</p>\n<p>De två möts som studenter vid Shiz-universitetet i det fantastiska landet Oz och utvecklar en oväntad men djup vänskap. Efter ett möte med den berömda trollkarlen i Oz når deras vänskap ett vägskäl och deras liv tar mycket olika riktningar. Glindas starka längtan efter popularitet gör att hon förförs av makt, medan Elphabas beslutsamhet att förbli sann mot sig själv, och till dem omkring henne, leder till chockerande konsekvenser för hennes framtid.</p>\n",
+  "price_range": [
+    135
+  ],
+  "ticket_link": "https://secure.tickster.com/y6br6c9jnaz1uyb",
+  "end_datetime": "2024-11-24T16:40:00Z",
+  "start_datetime": "2024-11-24T14:00:00Z"
+}

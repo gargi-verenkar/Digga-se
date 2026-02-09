@@ -1,0 +1,24 @@
+{
+  "source": "tickster",
+  "source_data": {
+    "name": "Soppgirobygget, TIX, Kuselofte, Fjellrev",
+    "image": "https://static.tickster.com/02/234bea4a824ab9ff6fc98c14e377df61b6d0fd",
+    "venue": {
+      "city": "Nyköping",
+      "name": "Hamnplan",
+      "zipcode": 61135,
+      "address_text": "Östra Längdgatan"
+    },
+    "currency": "SEK",
+    "event_id": "vf1p4hvzne970tk",
+    "organizer": "Big M Productions",
+    "description": "<p>Årets bästa kväll!!!</p>\n<p>Den 27/6 förvandlas Hamnplan i Nyköping till Sveriges roligaste plats! På scen har vi den norska eliten av akter med Soppgirobygget, TIX, Kuselofte samt Fjellrev! Alla akter kör varsina konserter och däremellan spelas det bästa av det mesta av kvällens DJ.</p>\n<p>Hamnplan i Nyköping kommer denna afton att förvandlas till årets bästa partyområde med fantastisk musik, god mat & dryck samt tusentals glada människor! Missa inte detta party som sommarens höjdpunkt Självklart med fullständiga rättigheter i barområden.</p>\n<p>I samband med biljettsläpp släpps ett begränsat antal Early-Birdbiljetter till rabatterat pris, först till kvarn!</p>\n<p>Soppgirobygget + TIX + Kuselofte + Fjellrev\nNyköping, Hamnplan, 27/6, 18:00 – 23:00\nBiljetter: 550kr + avgift\nEarly-Birdbiljetter: 450kr + avgift\nÅldersgräns: 13 år (18 år i barområden)</p>\n<p>Räkna med en förtrollad partyafton!</p>\n",
+    "price_range": [
+      450,
+      550
+    ],
+    "ticket_link": "https://secure.tickster.com/vf1p4hvzne970tk",
+    "end_datetime": "2025-06-27T21:00:00Z",
+    "start_datetime": "2025-06-27T16:00:00Z"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "source": "tickster",
+  "source_data": {
+    "name": "VINTERPJÄSEN",
+    "image": "https://static.tickster.com/8d/3b4426d3c7f9d0f4ef7425f299ec831a05d616",
+    "venue": {
+      "city": "Stockholm",
+      "name": "Teater Brunnsgatan Fyra",
+      "zipcode": 11138,
+      "address_text": "Brunnsgatan 4"
+    },
+    "currency": "SEK",
+    "event_id": "cclhfa5w330d322",
+    "organizer": "Brunnsgatan Fyra",
+    "description": "<p>VINTERPJÄSEN\nI en etta i Stockholms innerstad, mitt i den pissiga vintern, har fem ungdomar efterfest. Vad skulle de annars göra?</p>\n<p>Teatergruppen HJÄRTER FEM består av Ella Löfmark, Fanny Lindstedt Grahn och Mira Mark och har tidigare spelat på scener som Strindbergs Intima Teater, Kulturhuset Lava och Teater Tribunalen. I våras satte de upp vandrings och performance-föreställningen JULIE, baserad på August Strindbergs Fröken Julie, på Musikaliska Kvarteret.</p>\n<p>PÅ SCEN\nALVA BRATT\nMIRA MARK\nELLA LÖFMARK\nMALTE GÅRDINGER\nNONNI ARDAL</p>\n<p>TEXT OCH REGI\nFANNY LINDSTEDT GRAHN</p>\n<p>KOSTYM OCH SCENOGRAFI\nSELINA RÜEGGER</p>\n<p>DRAMATURG OCH TEXTHANDLEDARE\nJOHANNA EMANUELSSON</p>\n<p>AFFISCH OCH ESTETISK MOGUL\nTOMMIE X</p>\n<p>PRODUCENT\nELVIRA FRIDELL</p>\n<p>Föreställningen är 2h med paus (20 min)</p>\n",
+    "price_range": [
+      200,
+      500
+    ],
+    "ticket_link": "https://secure.tickster.com/cclhfa5w330d322",
+    "end_datetime": "2024-12-07T20:00:00Z",
+    "start_datetime": "2024-12-07T18:00:00Z"
+  }
+}

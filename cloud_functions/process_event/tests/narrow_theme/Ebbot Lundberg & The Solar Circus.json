@@ -1,0 +1,28 @@
+{
+  "source": "nortic",
+  "source_data": {
+    "name": "Ebbot Lundberg & The Solar Circus",
+    "image": "https://branding.nortic.io/organizer/781/event/59621?type=default&redirect=t",
+    "venue": {
+      "city": "Kalmar",
+      "name": "Söderport",
+      "zipcode": 39233,
+      "coordinates": {
+        "latitude": 16.35273,
+        "longitude": 56.65928
+      },
+      "address_text": "Slottsvägen 1"
+    },
+    "currency": "SEK",
+    "event_id": "242300",
+    "organizer": "Söderport // Kalmar",
+    "description": "<p>Som konstnärlig ledare och frontman i två av Skandinaviens mest inflytelserika rockband, Union Carbide Productions och The Soundtrack of Our LIves , har Ebbot Lundberg skapat sig en helt egen genre genom sin karismatiska personlighet och sitt metafysiskt sluga sätt att formulera tidseran vi befinner oss i. Ebbot står i en klass för sig och kanske är svår att sätta i ett fack men det handlar mest om psykedeliskt jazzinfluerad rock och popmusik som pekar åt alla tänkbara riktningar. </p>\r\n<p>Han har sedan starten av sin karriär jobbat som arrangör medproducent åt Internationella artister som Five Billion In Diamonds , Nicolai Dunger, The New Alchemy, Tentakel, Audio Laboratory„ Discopundare m.m. Han har även figurerat i »Så mycket Bättre« och egna programmet »Ebbots Ark« och blev därigenom »folklig« i hemlandet Sverige.</p>\r\n<p>Just nu är Ebbot superaktuell med EP´n »When The Shape Of Things Turn Into Sound« lanseringen av trippel LP´n »Beyond The Kybalion«. Ett projekt med 33 låtar som startade redan digitalt den 22 February 2022 i Egypten och kommer att sluta som färdig vinyl-sarkofag någon gång under 2025. </p>\r\n<p>Och i november 2024 Ebbot gör sin första riktiga soloturné tillsammans med bandet The Solar Circus som består av lite varierande gäster från det förflutna.</p>\r\n<p>Bland annat med gitarristen Billy Cervin från tidigare kompbandet »The Indigo Children«.</p>\r\n<p>Den startar i november och framåt 2024-2025. Innan dess kommer Ebbot dyka upp solo eller med sitt gamla band The Soundtrack of Our Lives under sommaren 2024. Detta kantas med digitala solosläpp inför kommande plattan.- <br>Söderport<br>Slottsvägen 1<br>Live på scen: 20:30<br>Förköp: 395:- + serviceavg. <br>Dörren 480:- (vid biljetter kvar) <br>Boka gärna bord för att äta innan konsert: <br>www.soderportrkalmar.com/boka</p>",
+    "price_range": [
+      395.0,
+      395.0
+    ],
+    "ticket_link": "https://www.nortic.se/ticket/show/242300",
+    "end_datetime": "2024-11-22T11:00:00Z",
+    "start_datetime": "2024-11-21T19:00:00Z"
+  }
+}

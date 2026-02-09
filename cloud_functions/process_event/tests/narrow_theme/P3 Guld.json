@@ -1,0 +1,26 @@
+{
+  "source": "ticketmaster",
+  "source_data": {
+    "name": "P3 Guld",
+    "image": "https://s1.ticketm.net/dam/a/064/390aeef3-91d3-4c8d-9647-9a8ff205c064_SOURCE",
+    "venue": {
+      "city": "Stockholm",
+      "name": "Cirkus",
+      "coordinates": {
+        "latitude": 59.32457,
+        "longitude": 18.09969
+      },
+      "address_text": "Djurgårdsslätten 43-45"
+    },
+    "status": "Active",
+    "currency": "SEK",
+    "event_id": "Z698xZq2Z1k7EQfQF",
+    "organizer": "Cirkus Arena och Restaurang på Djurgården",
+    "price_range": [
+      275.0,
+      495.0
+    ],
+    "ticket_link": "https://ticketmaster-se.tm7505.net/c/5433366/427737/7505?u=https%3A%2F%2Fwww.ticketmaster.se%2Fevent%2Fp3-guld-biljetter%2F127694688",
+    "start_datetime": "2025-01-22T19:00:00Z"
+  }
+}
