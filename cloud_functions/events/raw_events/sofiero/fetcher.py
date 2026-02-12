@@ -13,6 +13,10 @@ class SofieroFetcher(EventFetcher):
     @staticmethod
     def to_events(event_data: dict) -> list[Event]:
         result = []
+        # Waterfall description logic
+        raw_desc = event_data.get("LongDescription") or event_data.get("Description") or event_data.get("Lead") or ""
+        clean_desc = html.unescape(raw_desc)
+
         for date_item in event_data.get("Dates", []):
             venue = Venue(
                 city="Helsingborg",
@@ -22,7 +26,6 @@ class SofieroFetcher(EventFetcher):
                 coordinates=Coordinates(latitude=56.0839, longitude=12.6596)
             )
             
-            # STABLE ID: EventID + Unix Timestamp
             base_id = str(date_item.get("EventId"))
             timestamp = str(date_item.get("StartDateUTCUnix", ""))
             unique_event_id = f"{base_id}-{timestamp}" if timestamp else base_id
@@ -30,7 +33,7 @@ class SofieroFetcher(EventFetcher):
             source_data = SourceEvent(
                 name=event_data.get("Name"),
                 event_id=unique_event_id,
-                description=html.unescape(event_data.get("LongDescription", "") or ""),
+                description=clean_desc,
                 start_datetime=normalize_datetime(date_item.get("StartDate")),
                 end_datetime=normalize_datetime(date_item.get("EndDate")),
                 venue=venue,
@@ -42,12 +45,9 @@ class SofieroFetcher(EventFetcher):
                 date_tickets_sale_start=normalize_datetime(date_item.get("OnlineSaleStart")),
                 organizer="Sofiero",
                 image=event_data.get("EventImagePath"),
-                # MANDATORY FIELDS: Must be included to avoid TypeError
                 tags=None,
                 artists=None,
                 explicit_category=None
             )
-            
             result.append(Event(source="sofiero", source_data=source_data))
-        
         return result

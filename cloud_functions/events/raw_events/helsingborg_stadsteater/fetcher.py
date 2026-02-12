@@ -13,21 +13,26 @@ class HelsingborgStadsteaterFetcher(EventFetcher):
     @staticmethod
     def to_events(event_data: dict) -> list[Event]:
         result = []
+        raw_desc = event_data.get("LongDescription") or event_data.get("Description") or event_data.get("Lead") or ""
+        clean_desc = html.unescape(raw_desc)
+
         for date_item in event_data.get("Dates", []):
             venue = Venue(
                 city="Helsingborg",
                 address_text="Karl Johans gata 1",
-                zipcode=int("25267"),
+                zipcode=25267,
                 name="Helsingborgs Stadsteater",
                 coordinates=Coordinates(latitude=56.0487, longitude=12.6897)
             )
             
-            unique_id = f"helsingborg_stadsteater-{date_item.get('EventId')}"
+            base_id = str(date_item.get("EventId"))
+            timestamp = str(date_item.get("StartDateUTCUnix", ""))
+            unique_event_id = f"{base_id}-{timestamp}" if timestamp else base_id
 
             source_data = SourceEvent(
                 name=event_data.get("Name"),
-                event_id=unique_id,
-                description=html.unescape(event_data.get("LongDescription", "") or ""),
+                event_id=unique_event_id,
+                description=clean_desc,
                 start_datetime=normalize_datetime(date_item.get("StartDate")),
                 end_datetime=normalize_datetime(date_item.get("EndDate")),
                 venue=venue,
@@ -43,7 +48,5 @@ class HelsingborgStadsteaterFetcher(EventFetcher):
                 artists=None,
                 explicit_category=None
             )
-            
             result.append(Event(source="helsingborg_stadsteater", source_data=source_data))
-        
         return result
