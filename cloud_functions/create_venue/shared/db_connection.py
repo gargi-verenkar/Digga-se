@@ -2,12 +2,12 @@ import os
 import logging
 from google.cloud.sql.connector import Connector, IPTypes
 from sqlalchemy import create_engine
-from sqlalchemy.pool import QueuePool
+from sqlalchemy.pool import NullPool  # Changed from QueuePool
 
 # Set up logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
-logger.setLevel(logging.INFO)  # Explicitly set the logging level to INFO
+logger.setLevel(logging.INFO)
 
 
 def get_db_engine():
@@ -27,13 +27,10 @@ def get_db_engine():
 
     # Global connection object
     def get_connection():
-        logger.info("connecting to db...")
+        logger.info("Connecting to DB via Cloud SQL Connector...")
 
         try:
-            logger.info(
-                f"Instance: {db_instance_connection_name}, User: {db_user}, DB: {db_name}"
-            )
-            global_conn = connector.connect(
+            conn = connector.connect(
                 instance_connection_string=db_instance_connection_name,
                 driver="pg8000",
                 user=db_user,
@@ -41,21 +38,17 @@ def get_db_engine():
                 db=db_name,
                 ip_type=IPTypes.PUBLIC,
             )
-            logger.info("DB connection established successfully")
-            return global_conn
+            return conn
         except Exception as e:
             logger.error(f"Error connecting to the database: {e}")
-            logger.info(f"Error connecting to the database: {e}")
             raise
 
-    # SQLAlchemy engine with connection pool
+    # SQLAlchemy engine with NullPool for serverless environments
+    # This prevents "Too many connections" errors by ensuring 
+    # connections are closed immediately after use.
     engine = create_engine(
         "postgresql+pg8000://",
         creator=get_connection,
-        poolclass=QueuePool,
-        pool_size=5,
-        max_overflow=10,
-        pool_timeout=30,
-        pool_recycle=1800,
+        poolclass=NullPool,  # This is the key fix
     )
     return engine
