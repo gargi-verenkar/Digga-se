@@ -1,5 +1,6 @@
 import html
 import itertools
+import re
 from raw_events.helsingborg_stadsteater.api import get_events
 from raw_events.fetcher import EventFetcher, normalize_datetime
 from raw_events.models import Event, SourceEvent, Venue, Coordinates
@@ -13,8 +14,17 @@ class HelsingborgStadsteaterFetcher(EventFetcher):
     @staticmethod
     def to_events(event_data: dict) -> list[Event]:
         result = []
-        raw_desc = event_data.get("LongDescription") or event_data.get("Description") or event_data.get("Lead") or ""
+        # Waterfall description with Emergency Fallback
+        name = event_data.get("Name", "")
+        raw_desc = (
+            event_data.get("LongDescription") or 
+            event_data.get("Description") or 
+            event_data.get("Lead") or 
+            f"Välkommen till {name} på Helsingborgs Stadsteater. Läs mer och boka dina biljetter via länken."
+        )
         clean_desc = html.unescape(raw_desc)
+        
+        name_slug = re.sub(r'\W+', '', name).lower()
 
         for date_item in event_data.get("Dates", []):
             venue = Venue(
@@ -25,12 +35,11 @@ class HelsingborgStadsteaterFetcher(EventFetcher):
                 coordinates=Coordinates(latitude=56.0487, longitude=12.6897)
             )
             
-            base_id = str(date_item.get("EventId"))
             timestamp = str(date_item.get("StartDateUTCUnix", ""))
-            unique_event_id = f"{base_id}-{timestamp}" if timestamp else base_id
+            unique_event_id = f"{name_slug}-{timestamp}"
 
             source_data = SourceEvent(
-                name=event_data.get("Name"),
+                name=name,
                 event_id=unique_event_id,
                 description=clean_desc,
                 start_datetime=normalize_datetime(date_item.get("StartDate")),
